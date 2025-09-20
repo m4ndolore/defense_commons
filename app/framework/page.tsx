@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
@@ -257,7 +256,7 @@ export default function FrameworkPage() {
             </h3>
             <p className="text-gray-700 mb-8">
               ICD provides the collaborative infrastructure and compliance automation needed to enable all AAF pathways,
-              from urgent capability needs to complex major acquisitions. Each pathway leverages ICD's unique capabilities
+              from urgent capability needs to complex major acquisitions. Each pathway leverages ICD&apos;s unique capabilities
               to accelerate delivery while maintaining security and competition.
             </p>
 

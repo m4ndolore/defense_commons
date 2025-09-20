@@ -139,7 +139,7 @@ export default function IndustryPage() {
 
           <Grid cols={2} gap="lg" className="mb-12">
             {industryProblems.map((problem) => (
-              <Card key={problem.title} variant="outline" padding="lg">
+              <Card key={problem.title} variant="outlined" padding="lg">
                 <div className="flex items-start mb-4">
                   <div className="bg-red-100 p-3 rounded-lg mr-4">
                     <problem.icon className="w-6 h-6 text-red-600" />
@@ -215,7 +215,7 @@ export default function IndustryPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {businessCase.map((metric) => (
-              <Card key={metric.label} variant="outline" padding="lg" className="text-center">
+              <Card key={metric.label} variant="outlined" padding="lg" className="text-center">
                 <div className="text-4xl font-bold text-primary-600 mb-2">
                   {metric.metric}
                 </div>

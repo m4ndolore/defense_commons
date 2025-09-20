@@ -185,7 +185,7 @@ export default function GovernmentPage() {
 
           <Grid cols={2} gap="lg">
             {governmentChallenges.map((challenge) => (
-              <Card key={challenge.title} variant="outline" padding="lg">
+              <Card key={challenge.title} variant="outlined" padding="lg">
                 <div className="flex items-start mb-4">
                   <div className="bg-red-100 p-3 rounded-lg mr-4">
                     <challenge.icon className="w-6 h-6 text-red-600" />
@@ -263,7 +263,7 @@ export default function GovernmentPage() {
             Mission Impact: Speed of Capability Delivery
           </Heading>
 
-          <Card variant="outline" padding="lg" className="mb-12">
+          <Card variant="outlined" padding="lg" className="mb-12">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>

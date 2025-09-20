@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
-import Grid from "@/components/ui/Grid";
 import { Heading, Text } from "@/components/ui/Typography";
 import Button from "@/components/ui/Button";
 

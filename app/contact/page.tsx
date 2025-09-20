@@ -48,7 +48,7 @@ export default function ContactPage() {
             Contact the ICD Foundation
           </Heading>
           <Text variant="large" className="text-center mb-12">
-            Ready to join the future of defense collaboration? We're here to help you get started.
+            Ready to join the future of defense collaboration? We&apos;re here to help you get started.
           </Text>
         </Container>
       </Section>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                   Get in Touch
                 </Heading>
                 <Text className="mb-6">
-                  Whether you're interested in membership, consulting services, or have questions about our framework, we're here to help.
+                  Whether you&apos;re interested in membership, consulting services, or have questions about our framework, we&apos;re here to help.
                 </Text>
 
                 <div className="space-y-6">
@@ -249,7 +249,7 @@ export default function ContactPage() {
           </Heading>
 
           <div className="space-y-8">
-            <Card variant="outline" padding="lg">
+            <Card variant="outlined" padding="lg">
               <Heading level="h3" className="mb-3">
                 How do I become a member of the ICD Foundation?
               </Heading>
@@ -258,7 +258,7 @@ export default function ContactPage() {
               </Text>
             </Card>
 
-            <Card variant="outline" padding="lg">
+            <Card variant="outlined" padding="lg">
               <Heading level="h3" className="mb-3">
                 What consulting services does the ICD Foundation offer?
               </Heading>
@@ -267,7 +267,7 @@ export default function ContactPage() {
               </Text>
             </Card>
 
-            <Card variant="outline" padding="lg">
+            <Card variant="outlined" padding="lg">
               <Heading level="h3" className="mb-3">
                 Can I schedule a meeting or demonstration?
               </Heading>
@@ -276,7 +276,7 @@ export default function ContactPage() {
               </Text>
             </Card>
 
-            <Card variant="outline" padding="lg">
+            <Card variant="outlined" padding="lg">
               <Heading level="h3" className="mb-3">
                 How quickly can I expect a response?
               </Heading>

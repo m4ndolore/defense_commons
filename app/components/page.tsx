@@ -8,6 +8,7 @@ import Button from "@/components/ui/Button";
 import AccordionComponent from "@/components/ui/Accordion";
 import { FileText, Download, ExternalLink, Shield, Database, Cpu, Settings } from "lucide-react";
 
+
 export const metadata: Metadata = {
   title: "Components - Industry Commons for Defense",
   description: "Explore the complete ICD framework components including licenses, templates, governance documents, and technical specifications.",
@@ -1399,22 +1400,30 @@ This notice is issued under the authority granted to the ICD Steering Body pursu
       {
         name: "Steering Body Charter",
         description: "Charter establishing the ICD Steering Body governance structure",
-        fileName: "Steering-Body-Charter.md"
+        type: "Governance",
+        fileName: "ICD_Steering_Body_Charter_501c6.txt",
+        content: "# ICD Steering Body Charter\n\n**Version 1.0 – May 2025**\n\n## 1. Purpose and Authority\n\nThe Industry Commons for Defense (ICD) Steering Body is established as the primary governance authority for the ICD Framework..."
       },
       {
         name: "Certification Authority Charter",
         description: "Framework for ICD certification and validation processes",
-        fileName: "Certification-Authority-Charter.md"
+        type: "Governance",
+        fileName: "ICD_Certification_Authority_Charter_v1.0.txt",
+        content: "# ICD Certification Authority Charter\n\n**Version 1.0 – May 2025**\n\n## 1. Mission and Scope\n\nThe ICD Certification Authority provides validation and certification services for components within the ICD Framework..."
       },
       {
         name: "Coalition Disclosure Tiers",
         description: "Guidelines for information sharing with coalition partners",
-        fileName: "Coalition-Disclosure-Tiers.md"
+        type: "Governance",
+        fileName: "ICD_Coalition_Disclosure_Tiers_v1.0.txt",
+        content: "# ICD Coalition Disclosure Tiers\n\n**Version 1.0 – May 2025**\n\n## 1. Overview\n\nThis document establishes tiered disclosure guidelines for sharing ICD Framework components with coalition partners..."
       },
       {
         name: "Emergency Override Protocols",
         description: "Procedures for emergency access and override situations",
-        fileName: "Emergency-Override-Protocols.md"
+        type: "Governance",
+        fileName: "ICD_Emergency_Override_Protocols_v1.0.txt",
+        content: "# ICD Emergency Override Protocols\n\n**Version 1.0 – May 2025**\n\n## 1. Purpose\n\nThese protocols define emergency procedures for accessing ICD-licensed assets during crisis situations..."
       }
     ]
   },
@@ -1429,17 +1438,23 @@ This notice is issued under the authority granted to the ICD Steering Body pursu
       {
         name: "Metadata Schema",
         description: "JSON schema for ICD component metadata",
-        fileName: "metadata-schema.json"
+        type: "Data",
+        fileName: "metadata-schema.json",
+        content: "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"title\": \"ICD Component Metadata Schema\",\n  \"description\": \"Schema for ICD framework component metadata\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": { \"type\": \"string\" },\n    \"version\": { \"type\": \"string\" },\n    \"license\": { \"type\": \"string\" }\n  }\n}"
       },
       {
         name: "Federated Audit Ledger Schema",
         description: "Schema for distributed audit trail management",
-        fileName: "audit-ledger-schema.json"
+        type: "Data",
+        fileName: "audit-ledger-schema.json",
+        content: "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"title\": \"ICD Federated Audit Ledger Schema\",\n  \"description\": \"Schema for distributed audit trail in ICD framework\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"timestamp\": { \"type\": \"string\" },\n    \"actor\": { \"type\": \"string\" },\n    \"action\": { \"type\": \"string\" }\n  }\n}"
       },
       {
         name: "Model Testing Guidance",
         description: "Comprehensive guidance for AI/ML model validation and testing",
-        fileName: "Model-Testing-Guidance.md"
+        type: "AI/ML",
+        fileName: "Model-Testing-Guidance.md",
+        content: "# ICD Model Testing Guidance\n\n**Version 1.0 – May 2025**\n\n## 1. Overview\n\nThis document provides comprehensive guidance for validating and testing AI/ML models within the ICD Framework..."
       }
     ]
   },
@@ -1454,22 +1469,30 @@ This notice is issued under the authority granted to the ICD Steering Body pursu
       {
         name: "Field Deployment Binder",
         description: "Complete guide for field deployment of ICD components",
-        fileName: "Field-Deployment-Binder.md"
+        type: "Operations",
+        fileName: "Field-Deployment-Binder.md",
+        content: "# ICD Field Deployment Binder\n\n**Version 1.0 – May 2025**\n\n## 1. Deployment Overview\n\nThis binder provides comprehensive guidance for deploying ICD framework components in field environments..."
       },
       {
         name: "Partner Onboarding Kit",
         description: "Materials and procedures for onboarding new ICD partners",
-        fileName: "Partner-Onboarding-Kit.md"
+        type: "Operations",
+        fileName: "Partner-Onboarding-Kit.md",
+        content: "# ICD Partner Onboarding Kit\n\n**Version 1.0 – May 2025**\n\n## 1. Welcome to ICD\n\nThis kit contains all materials and procedures needed to onboard new partners into the ICD ecosystem..."
       },
       {
         name: "FFRDC Onboarding Contract",
         description: "Standard contract template for FFRDC participation",
-        fileName: "FFRDC-Onboarding-Contract.md"
+        type: "Legal",
+        fileName: "FFRDC-Onboarding-Contract.md",
+        content: "# ICD FFRDC Onboarding Contract Template\n\n**Version 1.0 – May 2025**\n\n## 1. Contract Overview\n\nThis template provides standard contract language for FFRDC participation in ICD programs..."
       },
       {
         name: "Red Team Activation Playbook",
         description: "Procedures for security assessment and red team exercises",
-        fileName: "Red-Team-Activation-Playbook.md"
+        type: "Security",
+        fileName: "Red-Team-Activation-Playbook.md",
+        content: "# ICD Red Team Activation Playbook\n\n**Version 1.0 – May 2025**\n\n## 1. Red Team Overview\n\nThis playbook outlines procedures for conducting security assessments and red team exercises..."
       }
     ]
   }
@@ -1636,7 +1659,7 @@ export default function ComponentsPage() {
           </Heading>
 
           <Grid cols={2} gap="lg">
-            <Card variant="outline" padding="lg">
+            <Card variant="outlined" padding="lg">
               <Heading level="h3" className="mb-4">
                 Contributing Guidelines
               </Heading>
@@ -1652,7 +1675,7 @@ export default function ComponentsPage() {
               </Button>
             </Card>
 
-            <Card variant="outline" padding="lg">
+            <Card variant="outlined" padding="lg">
               <Heading level="h3" className="mb-4">
                 Support & Documentation
               </Heading>
