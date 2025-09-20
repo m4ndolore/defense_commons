@@ -1488,7 +1488,7 @@ export default function ComponentsPage() {
             <Heading level="h1" className="mb-6 text-white">
               ICD Framework Components
             </Heading>
-            <Text variant="large" className="mb-8 text-white/90">
+            <Text variant="large" className="mb-8 text-white">
               Explore the complete collection of licenses, templates, governance documents, and technical specifications
               that power the Industry Commons for Defense framework.
             </Text>
