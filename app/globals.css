@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* ICD Design System Variables */
+:root {
+  /* Primary Colors */
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-200: #ddd6fe;
+  --color-primary-300: #c4b5fd;
+  --color-primary-400: #a78bfa;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  --color-primary-800: #5b21b6;
+  --color-primary-900: #4c1d95;
+
+  /* Accent Colors */
+  --color-accent-gold: #F59E0B;
+  --color-accent-green: #059669;
+  --color-accent-blue: #2563EB;
+  --color-accent-red: #DC2626;
+
+  /* Neutral Colors */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  /* Text Colors */
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-muted: var(--color-neutral-600);
+  --color-text-light: var(--color-neutral-500);
+  --color-text-inverse: #ffffff;
+
+  /* Background Colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: var(--color-neutral-50);
+  --color-bg-tertiary: var(--color-neutral-100);
+
+  /* Border Colors */
+  --color-border: var(--color-neutral-200);
+  --color-border-hover: var(--color-neutral-300);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+
+  /* Legacy support */
+  --background: #ffffff;
+  --foreground: var(--color-neutral-900);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* High contrast text utilities */
+.text-high-contrast {
+  color: var(--color-text-primary) !important;
+}
+
+.text-medium-contrast {
+  color: var(--color-text-secondary) !important;
+}
+
+.text-low-contrast {
+  color: var(--color-text-muted) !important;
+}
+
+/* Consistent section styling */
+.section-default {
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+/* Consistent card styling */
+.card-default {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.card-default:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Button base styles */
+.btn {
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all var(--transition-base);
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary-800);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-700);
+}
+
+/* Ensure good contrast on all text */
+body {
+  background: var(--background);
+  color: var(--color-text-primary);
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
+  font-family: var(--font-playfair), serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p, li {
+  color: var(--color-text-secondary);
+}
+
+/* Ensure links are visible */
+a {
+  color: var(--color-primary-700);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-600);
+}
+
+/* Fix contrast in dark sections */
+.dark-section {
+  background: var(--color-primary-800);
+  color: var(--color-text-inverse);
+}
+
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section p {
+  color: var(--color-text-inverse);
+}
