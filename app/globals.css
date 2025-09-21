@@ -13,6 +13,7 @@
   --color-primary-700: #6d28d9;
   --color-primary-800: #5b21b6;
   --color-primary-900: #4c1d95;
+  --color-primary-950: #2e1065;
 
   /* Accent Colors */
   --color-accent-gold: #F59E0B;
@@ -165,4 +166,30 @@ a:hover {
 .dark-section h3,
 .dark-section p {
   color: var(--color-text-inverse);
+}
+
+/* Hero section with high contrast */
+.hero-high-contrast {
+  background: var(--color-primary-950);
+  color: var(--color-text-inverse);
+}
+
+.hero-high-contrast h1 {
+  color: #ffffff;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-high-contrast p {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero accent elements */
+.hero-accent-border {
+  border: 2px solid var(--color-accent-gold);
+  border-radius: 0.5rem;
+}
+
+.hero-accent-glow {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
 }

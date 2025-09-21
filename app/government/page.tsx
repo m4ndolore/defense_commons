@@ -127,7 +127,7 @@ export default function GovernmentPage() {
               Accelerate Defense Capability Delivery
             </Heading>
             <Text variant="large" className="mb-8 text-white/90">
-              The ICD Framework enables government to harness industry innovation at speed,
+              The ICD collaborative framework enables government to harness industry innovation at speed,
               while maintaining security, competition, and full operational control.
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -135,7 +135,7 @@ export default function GovernmentPage() {
                 href="/get-started"
                 variant="secondary"
                 size="lg"
-                className="bg-white text-primary-800 hover:bg-gray-100"
+                className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
               >
                 Explore Implementation
               </Button>
@@ -144,7 +144,7 @@ export default function GovernmentPage() {
                 variant="secondary"
                 style="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary-800"
+                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
               >
                 Request Briefing
               </Button>
@@ -457,7 +457,7 @@ export default function GovernmentPage() {
                 href="/get-started"
                 variant="secondary"
                 size="lg"
-                className="bg-white text-primary-800 hover:bg-gray-100"
+                className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
               >
                 Start Implementation
               </Button>
@@ -466,7 +466,7 @@ export default function GovernmentPage() {
                 variant="secondary"
                 style="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary-800"
+                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
               >
                 Request Briefing
               </Button>

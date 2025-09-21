@@ -146,7 +146,7 @@ export default function AboutPage() {
               href="mailto:contact@icd-defense.org"
               variant="secondary"
               size="lg"
-              className="bg-white text-primary-800 hover:bg-gray-100"
+              className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
             >
               contact@icd-defense.org
             </Button>

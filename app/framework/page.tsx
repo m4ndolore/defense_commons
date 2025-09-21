@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Framework - Industry Commons for Defense",
-  description: "Learn about the ICD Framework's core components, licensing models, and technical architecture for defense collaboration.",
+  title: "ICD Collaborative Framework - Industry Commons for Defense",
+  description: "Learn about the ICD collaborative framework's core components, licensing models, and technical architecture for defense collaboration.",
 };
 
 const licenses = [
@@ -15,7 +15,7 @@ const licenses = [
   },
   {
     title: "Hardware (HW-ICD)",
-    description: "Framework for hardware designs, schematics, and manufacturing specifications",
+    description: "License for hardware designs, schematics, and manufacturing specifications",
     features: ["Design transparency", "Modular architecture", "Supply chain security"],
     color: "border-icd-blue"
   },
@@ -66,11 +66,11 @@ export default function FrameworkPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <section className="mb-16">
           <h1 className="text-4xl font-display font-bold mb-8 text-gray-900 text-center">
-            The ICD Framework
+            The ICD Collaborative Framework
           </h1>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-xl text-gray-600">
-              A modern framework for open, modular, and secure co-development of dual-use technologies, designed for software-defined warfare, peer competition, and agile acquisition mandates.
+              A modern collaborative framework for open, modular, and secure co-development of dual-use technologies, designed for software-defined warfare, peer competition, and agile acquisition mandates.
             </p>
           </div>
         </section>
@@ -255,7 +255,7 @@ export default function FrameworkPage() {
               Adaptive Acquisition Framework (AAF) Integration
             </h3>
             <p className="text-gray-700 mb-8">
-              ICD provides the collaborative infrastructure and compliance automation needed to enable all AAF pathways,
+              ICD provides the collaborative infrastructure and compliance automation needed to enable all six AAF pathways,
               from urgent capability needs to complex major acquisitions. Each pathway leverages ICD&apos;s unique capabilities
               to accelerate delivery while maintaining security and competition.
             </p>
@@ -435,6 +435,41 @@ export default function FrameworkPage() {
               </div>
             </div>
 
+            {/* Pathway 6: Acquisition of Services */}
+            <div className="mb-8">
+              <div className="bg-white border-l-4 border-indigo-500 p-6 rounded-lg mb-4">
+                <h4 className="text-lg font-semibold mb-3 text-indigo-700">Pathway 6: Acquisition of Services</h4>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h5 className="font-medium mb-2 text-gray-800">AAF Requirements</h5>
+                    <ul className="text-sm space-y-1 text-gray-700">
+                      <li>• Knowledge-based services delivery</li>
+                      <li>• Performance-based service contracts</li>
+                      <li>• Commercial best practices adoption</li>
+                      <li>• Outcome-focused service delivery</li>
+                      <li>• Integrated service management</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-medium mb-2 text-indigo-700">ICD Enablers</h5>
+                    <ul className="text-sm space-y-1 text-gray-700">
+                      <li>• <strong>Service Definition Framework:</strong> Standardized service specifications and metrics</li>
+                      <li>• <strong>Collaborative Service Development:</strong> Multi-stakeholder service design and delivery</li>
+                      <li>• <strong>Performance Monitoring Platform:</strong> Real-time service quality measurement</li>
+                      <li>• <strong>Service Integration Layer:</strong> Seamless integration across service providers</li>
+                      <li>• <strong>Quality Assurance Framework:</strong> Continuous improvement and standardization</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-4 bg-indigo-50 p-4 rounded">
+                  <p className="text-sm text-indigo-800">
+                    <strong>Example:</strong> Multi-vendor cybersecurity services integrated through ICD framework
+                    enabling seamless threat intelligence sharing and coordinated response across DoD enterprise.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Cross-Pathway Benefits */}
             <div className="mt-8 bg-gradient-to-r from-green-100 to-blue-100 p-6 rounded-lg">
               <h4 className="text-lg font-semibold mb-4 text-gray-800">Cross-Pathway ICD Benefits</h4>
@@ -442,7 +477,7 @@ export default function FrameworkPage() {
                 <div>
                   <h5 className="font-medium mb-2 text-green-700">Accelerated Timelines</h5>
                   <p className="text-sm text-gray-700">
-                    Pre-approved components, automated compliance, and collaborative development reduce acquisition time across all pathways by 40-60%.
+                    Pre-approved components, automated compliance, and collaborative development reduce acquisition time across all six pathways by 40-60%.
                   </p>
                 </div>
                 <div>

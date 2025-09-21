@@ -1513,14 +1513,14 @@ export default function ComponentsPage() {
             </Heading>
             <Text variant="large" className="mb-8 text-white">
               Explore the complete collection of licenses, templates, governance documents, and technical specifications
-              that power the Industry Commons for Defense framework.
+              that power the Industry Commons for Defense collaborative framework.
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href={baseGitHubUrl}
                 variant="secondary"
                 size="lg"
-                className="bg-white text-primary-800 hover:bg-gray-100"
+                className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 View on GitHub
@@ -1530,7 +1530,7 @@ export default function ComponentsPage() {
                 variant="secondary"
                 style="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary-800"
+                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Archive

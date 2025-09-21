@@ -6,7 +6,7 @@ const footerLinks = {
     links: [
       { name: "For Industry", href: "/industry" },
       { name: "For Government", href: "/government" },
-      { name: "Framework Details", href: "/framework" },
+      { name: "Framework", href: "/framework" },
       { name: "Components", href: "/components" },
     ],
   },
@@ -38,8 +38,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-900 text-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-primary-950 text-white hero-high-contrast relative overflow-hidden">
+      {/* Subtle accent border at top */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-icd-gold via-icd-green to-icd-blue"></div>
+
+      {/* Geometric accent elements */}
+      <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
+        <div className="w-full h-full bg-gradient-to-br from-icd-blue to-transparent rounded-full blur-2xl"></div>
+      </div>
+      <div className="absolute bottom-0 left-0 w-24 h-24 opacity-5">
+        <div className="w-full h-full bg-gradient-to-tr from-icd-gold to-transparent rounded-full blur-2xl"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-white font-display font-semibold mb-4">
@@ -50,7 +61,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-neutral-300 hover:text-white transition-colors duration-200"
+                    className="text-white/80 hover:text-icd-gold transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -68,7 +79,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-neutral-300 hover:text-white transition-colors duration-200"
+                    className="text-white/80 hover:text-icd-gold transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -86,7 +97,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-neutral-300 hover:text-white transition-colors duration-200"
+                    className="text-white/80 hover:text-icd-gold transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -117,7 +128,7 @@ export default function Footer() {
               <br />
               <a
                 href="mailto:contact@icd-defense.org"
-                className="text-neutral-300 hover:text-white transition-colors duration-200"
+                className="text-white/80 hover:text-icd-gold transition-colors duration-200"
               >
                 contact@icd-defense.org
               </a>

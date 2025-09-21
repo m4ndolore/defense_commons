@@ -100,7 +100,7 @@ export default function IndustryPage() {
               Transform Defense Collaboration
             </Heading>
             <Text variant="large" className="mb-8 text-white/90">
-              The ICD Framework eliminates traditional barriers between industry and government,
+              The ICD collaborative framework eliminates traditional barriers between industry and government,
               creating profitable pathways for defense innovation while protecting your IP.
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -108,7 +108,7 @@ export default function IndustryPage() {
                 href="/get-started"
                 variant="secondary"
                 size="lg"
-                className="bg-white text-primary-800 hover:bg-gray-100"
+                className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
               >
                 Get Started Today
               </Button>
@@ -117,7 +117,7 @@ export default function IndustryPage() {
                 variant="secondary"
                 style="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary-800"
+                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
               >
                 Schedule Consultation
               </Button>
@@ -359,7 +359,7 @@ export default function IndustryPage() {
                 href="/get-started"
                 variant="secondary"
                 size="lg"
-                className="bg-white text-primary-800 hover:bg-gray-100"
+                className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
               >
                 Start Your Journey
               </Button>
@@ -368,7 +368,7 @@ export default function IndustryPage() {
                 variant="secondary"
                 style="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary-800"
+                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
               >
                 Schedule Demo
               </Button>
