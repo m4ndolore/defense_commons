@@ -55,11 +55,11 @@ export default function Benefits() {
               className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
             >
               <h3
-                className={`text-lg font-display font-semibold mb-3 ${stakeholder.color}`}
+                className={`text-xl font-display font-semibold mb-4 ${stakeholder.color}`}
               >
                 {stakeholder.title}
               </h3>
-              <ul className="text-sm text-gray-600 space-y-2">
+              <ul className="text-base text-gray-600 space-y-3">
                 {stakeholder.benefits.map((benefit) => (
                   <li key={benefit} className="flex items-start">
                     <span className="text-icd-green mr-2">•</span>
