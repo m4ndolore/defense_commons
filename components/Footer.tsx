@@ -117,13 +117,13 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-300 hover:text-white transition-colors duration-200"
+                  className="text-white/80 hover:text-icd-gold transition-colors duration-200"
                 >
                   {link.name}
                 </a>
               ))}
             </div>
-            <p className="text-sm text-neutral-300">
+            <p className="text-sm text-white/80">
               Contact:
               <br />
               <a
@@ -136,7 +136,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-neutral-800 mt-8 pt-8 text-center text-sm text-neutral-400">
+        <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm text-white/70">
           <p>
             © {currentYear} The ICD Foundation. All rights reserved. Licensed
             under SW-ICD License v1.0
