@@ -6,24 +6,24 @@ const features = [
     description:
       "Cyber-hardened framework with trusted AI capabilities and comprehensive audit trails",
     icon: Shield,
-    color: "text-primary-600",
-    bgColor: "bg-primary-600",
+    color: "text-icd-purple",
+    bgColor: "bg-icd-purple",
   },
   {
     title: "Rapid Deployment",
     description:
       "Deliver MVPs in under 12 months with modular, reusable components",
     icon: Zap,
-    color: "text-yellow-500",
-    bgColor: "bg-yellow-500",
+    color: "text-icd-gold",
+    bgColor: "bg-icd-gold",
   },
   {
     title: "Multi-Stakeholder",
     description:
       "Unite government, industry, FFRDCs, and allies in collaborative innovation",
     icon: Users,
-    color: "text-emerald-600",
-    bgColor: "bg-emerald-600",
+    color: "text-icd-green",
+    bgColor: "bg-icd-green",
   },
 ];
 

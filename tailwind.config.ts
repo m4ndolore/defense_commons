@@ -6,6 +6,16 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'bg-icd-purple',
+    'bg-icd-gold',
+    'bg-icd-green',
+    'text-icd-purple',
+    'text-icd-gold',
+    'text-icd-green',
+    'text-icd-blue',
+    'text-icd-red'
+  ],
   theme: {
     extend: {
       colors: {
