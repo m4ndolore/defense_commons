@@ -6,8 +6,8 @@ const features = [
     description:
       "Cyber-hardened framework with trusted AI capabilities and comprehensive audit trails",
     icon: Shield,
-    color: "text-icd-purple",
-    bgColor: "bg-icd-purple",
+    color: "text-primary-800",
+    bgColor: "bg-primary-800",
   },
   {
     title: "Rapid Deployment",
