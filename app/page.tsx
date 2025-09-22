@@ -1,8 +1,8 @@
-import Hero from "@/components/Hero";
-import CoreComponents from "@/components/CoreComponents";
-import Benefits from "@/components/Benefits";
-import ROISection from "@/components/ROISection";
-import CTASection from "@/components/CTASection";
+import Hero from "@/components/home/Hero";
+import CoreComponents from "@/components/home/CoreComponents";
+import Benefits from "@/components/home/Benefits";
+import ROISection from "@/components/home/ROISection";
+import CTASection from "@/components/shared/CTASection";
 
 export default function Home() {
   return (
