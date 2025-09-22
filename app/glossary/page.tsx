@@ -3,7 +3,6 @@ import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import { Heading, Text } from "@/components/ui/Typography";
-import { Search } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Glossary - Industry Commons for Defense",

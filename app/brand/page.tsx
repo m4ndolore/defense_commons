@@ -21,13 +21,6 @@ import {
   CheckCircle,
   AlertCircle,
   Info,
-  X,
-  Menu,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  ArrowRight,
   Building2,
   Target,
   Lightbulb,
@@ -99,7 +92,7 @@ const components = [
       <div className="flex gap-3 justify-center items-center p-6">
         <Button variant="primary" size="sm">Primary</Button>
         <Button variant="secondary" size="md">Secondary</Button>
-        <Button variant="ghost" size="lg">Ghost</Button>
+        <Button variant="primary" style="ghost" size="lg">Ghost</Button>
       </div>
     )
   },
@@ -270,7 +263,7 @@ export default function BrandPage() {
               <Heading level="h3" className="mb-3">Primary Logo</Heading>
               <Text>
                 The ICD Foundation logo represents collaboration and innovation in defense technology.
-                Maintain clear space equal to the height of the "I" character around all sides.
+                Maintain clear space equal to the height of the &ldquo;I&rdquo; character around all sides.
               </Text>
             </Card>
 
@@ -298,7 +291,7 @@ export default function BrandPage() {
               <div>
                 <Heading level="h4" className="mb-2">Logo Usage Guidelines</Heading>
                 <ul className="space-y-1 text-sm">
-                  <li>• Minimum size: 50px width for digital, 0.5" for print</li>
+                  <li>• Minimum size: 50px width for digital, 0.5&rdquo; for print</li>
                   <li>• Do not rotate, skew, or distort the logo</li>
                   <li>• Do not change logo colors or add effects</li>
                   <li>• Maintain aspect ratio when scaling</li>
