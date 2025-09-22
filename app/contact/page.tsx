@@ -251,10 +251,10 @@ export default function ContactPage() {
           <div className="space-y-8">
             <Card variant="outlined" padding="lg">
               <Heading level="h3" className="mb-3">
-                How do I become a member of the ICD Foundation?
+                How do I become a member of the ICD Steering Body?
               </Heading>
               <Text>
-                Membership is available to government agencies, FFRDCs, UARCs, and qualified industry partners. Visit our Get Started page or contact us directly to learn about the application process and requirements.
+                ICD Steering Body membership is available to FFRDCs, UARCs, and qualified industry partners. Government agencies participate through partnership agreements rather than membership, as they cannot be members of a non-profit organization. Visit our Get Started page or contact us directly to learn about the application process and requirements.
               </Text>
             </Card>
 
