@@ -1,4 +1,6 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
@@ -15,6 +17,7 @@ import {
   Cpu,
   Database,
   ChevronRight,
+  ChevronLeft,
   CheckCircle,
   AlertCircle,
   Info,
@@ -31,10 +34,7 @@ import {
   Zap
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Brand Guidelines - Industry Commons for Defense",
-  description: "ICD Foundation brand guidelines, design system, color palette, typography, and component specifications.",
-};
+// Note: Metadata is handled in layout.tsx for client components
 
 const primaryColors = [
   { name: "Primary 50", value: "#f5f3ff", hex: "245, 243, 255" },
@@ -95,53 +95,146 @@ const components = [
     description: "Interactive elements for user actions",
     variants: ["Primary", "Secondary", "Ghost"],
     sizes: ["Small", "Medium", "Large"],
-    states: ["Default", "Hover", "Active", "Disabled"]
+    preview: (
+      <div className="flex gap-3 justify-center items-center p-6">
+        <Button variant="primary" size="sm">Primary</Button>
+        <Button variant="secondary" size="md">Secondary</Button>
+        <Button variant="ghost" size="lg">Ghost</Button>
+      </div>
+    )
   },
   {
     name: "Card",
     description: "Content containers with optional borders and shadows",
     variants: ["Filled", "Outlined", "Elevated"],
-    usage: "Feature highlights, content sections, information blocks"
+    usage: "Feature highlights, content sections, information blocks",
+    preview: (
+      <div className="grid grid-cols-3 gap-3 p-4 scale-75">
+        <Card variant="filled" padding="sm">
+          <Text variant="small" className="font-semibold">Filled</Text>
+          <Text variant="small">Content</Text>
+        </Card>
+        <Card variant="outlined" padding="sm">
+          <Text variant="small" className="font-semibold">Outlined</Text>
+          <Text variant="small">Content</Text>
+        </Card>
+        <Card variant="elevated" padding="sm">
+          <Text variant="small" className="font-semibold">Elevated</Text>
+          <Text variant="small">Content</Text>
+        </Card>
+      </div>
+    )
   },
   {
     name: "Section",
     description: "Page layout sections with spacing variants",
     variants: ["Default", "Spacious", "Compact"],
-    backgrounds: ["White", "Gray", "Gradient", "Dark"]
+    backgrounds: ["White", "Gray", "Gradient", "Dark"],
+    preview: (
+      <div className="w-full h-32 relative">
+        <div className="absolute inset-0 flex flex-col gap-1 scale-50 origin-center">
+          <div className="bg-white h-8 rounded flex items-center justify-center text-xs">White</div>
+          <div className="bg-gray-100 h-8 rounded flex items-center justify-center text-xs">Gray</div>
+          <div className="bg-gradient-to-r from-primary-800 to-primary-600 h-8 rounded flex items-center justify-center text-white text-xs">Gradient</div>
+          <div className="bg-gray-900 h-8 rounded flex items-center justify-center text-white text-xs">Dark</div>
+        </div>
+      </div>
+    )
   },
   {
     name: "Typography",
     description: "Text elements with semantic HTML",
     components: ["Heading (h1-h6)", "Text (p, span)", "List (ul, ol)"],
-    variants: ["Display", "Body", "Small", "Caption"]
+    variants: ["Display", "Body", "Small", "Caption"],
+    preview: (
+      <div className="p-6 space-y-2">
+        <h3 className="text-2xl font-display font-bold">Display Heading</h3>
+        <p className="text-base">Body text paragraph</p>
+        <p className="text-sm text-gray-600">Small caption text</p>
+      </div>
+    )
   },
   {
     name: "Container",
     description: "Content width constraints for readability",
     sizes: ["Small (640px)", "Medium (768px)", "Large (1024px)", "XL (1280px)"],
-    usage: "Center content, maintain readable line lengths"
+    usage: "Center content, maintain readable line lengths",
+    preview: (
+      <div className="w-full p-4 space-y-2">
+        <div className="mx-auto bg-primary-100 h-4 rounded" style={{width: "40%"}}></div>
+        <div className="mx-auto bg-primary-200 h-4 rounded" style={{width: "50%"}}></div>
+        <div className="mx-auto bg-primary-300 h-4 rounded" style={{width: "60%"}}></div>
+        <div className="mx-auto bg-primary-400 h-4 rounded" style={{width: "70%"}}></div>
+      </div>
+    )
   },
   {
     name: "Grid",
     description: "Responsive grid layouts",
     columns: ["1-4 columns", "Responsive breakpoints", "Gap utilities"],
-    usage: "Card layouts, feature grids, content organization"
+    usage: "Card layouts, feature grids, content organization",
+    preview: (
+      <div className="grid grid-cols-3 gap-2 p-6">
+        <div className="bg-primary-200 h-12 rounded"></div>
+        <div className="bg-primary-300 h-12 rounded"></div>
+        <div className="bg-primary-400 h-12 rounded"></div>
+        <div className="bg-primary-300 h-12 rounded"></div>
+        <div className="bg-primary-400 h-12 rounded"></div>
+        <div className="bg-primary-200 h-12 rounded"></div>
+      </div>
+    )
   },
   {
     name: "Hero",
     description: "Page header sections with high visual impact",
     features: ["Dark background (primary-950)", "Geometric accents", "Gold/Green CTAs"],
-    usage: "Page introductions, major sections"
+    usage: "Page introductions, major sections",
+    preview: (
+      <div className="relative bg-primary-950 h-32 rounded-lg overflow-hidden flex items-center justify-center">
+        <div className="absolute top-0 right-0 w-16 h-16 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-icd-gold to-transparent rounded-full blur-xl"></div>
+        </div>
+        <div className="text-center z-10">
+          <h4 className="text-white font-display text-sm font-bold mb-2">Hero Section</h4>
+          <div className="flex gap-2 justify-center scale-75">
+            <Button size="sm" className="bg-icd-gold text-primary-950 text-xs px-2 py-1">CTA</Button>
+            <Button size="sm" className="bg-transparent text-white border border-icd-green text-xs px-2 py-1">Learn</Button>
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     name: "CTASection",
     description: "Call-to-action sections",
     features: ["High contrast design", "Centered content", "Dual button layout"],
-    usage: "Conversion points, next steps"
+    usage: "Conversion points, next steps",
+    preview: (
+      <div className="bg-primary-950 p-6 rounded-lg text-center">
+        <h4 className="text-white font-display text-lg font-bold mb-2">Take Action</h4>
+        <p className="text-white/80 text-sm mb-3">Join us today</p>
+        <div className="flex gap-2 justify-center scale-90">
+          <Button size="sm" className="bg-icd-gold text-primary-950 text-xs">Start</Button>
+          <Button size="sm" className="bg-transparent text-white border border-icd-green text-xs">Info</Button>
+        </div>
+      </div>
+    )
   }
 ];
 
 export default function BrandPage() {
+  const [currentComponentIndex, setCurrentComponentIndex] = useState(0);
+
+  const nextComponent = () => {
+    setCurrentComponentIndex((prev) => (prev + 1) % components.length);
+  };
+
+  const prevComponent = () => {
+    setCurrentComponentIndex((prev) => (prev - 1 + components.length) % components.length);
+  };
+
+  const currentComponent = components[currentComponentIndex];
+
   return (
     <>
       {/* Header Section */}
@@ -382,22 +475,54 @@ export default function BrandPage() {
         </Container>
       </Section>
 
-      {/* Components Section */}
+      {/* Components Section - Carousel */}
       <Section variant="default" background="white">
         <Container size="lg">
           <Heading level="h2" className="mb-8">Component Library</Heading>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {components.map((component) => (
-              <Card key={component.name} variant="outlined" padding="lg">
-                <Heading level="h3" className="mb-3">{component.name}</Heading>
-                <Text className="mb-4">{component.description}</Text>
+          <div className="relative">
+            {/* Carousel Container */}
+            <Card variant="outlined" padding="lg">
+              {/* Navigation Buttons */}
+              <div className="flex justify-between items-center mb-6">
+                <button
+                  onClick={prevComponent}
+                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  aria-label="Previous component"
+                >
+                  <ChevronLeft className="w-6 h-6 text-gray-600" />
+                </button>
 
-                {component.variants && (
-                  <div className="mb-3">
-                    <Text variant="small" className="font-semibold mb-1">Variants:</Text>
+                <div className="text-center">
+                  <Heading level="h3" className="mb-2">{currentComponent.name}</Heading>
+                  <Text variant="small" className="text-gray-500">
+                    {currentComponentIndex + 1} of {components.length}
+                  </Text>
+                </div>
+
+                <button
+                  onClick={nextComponent}
+                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  aria-label="Next component"
+                >
+                  <ChevronRight className="w-6 h-6 text-gray-600" />
+                </button>
+              </div>
+
+              {/* Component Preview */}
+              <div className="bg-gray-50 rounded-lg mb-6 h-48 flex items-center justify-center overflow-hidden">
+                {currentComponent.preview}
+              </div>
+
+              {/* Component Details */}
+              <div className="space-y-4">
+                <Text className="text-gray-700">{currentComponent.description}</Text>
+
+                {currentComponent.variants && (
+                  <div>
+                    <Text variant="small" className="font-semibold mb-2">Variants:</Text>
                     <div className="flex flex-wrap gap-2">
-                      {component.variants.map((variant) => (
+                      {currentComponent.variants.map((variant) => (
                         <span key={variant} className="text-xs bg-gray-100 px-2 py-1 rounded">
                           {variant}
                         </span>
@@ -406,11 +531,11 @@ export default function BrandPage() {
                   </div>
                 )}
 
-                {component.sizes && (
-                  <div className="mb-3">
-                    <Text variant="small" className="font-semibold mb-1">Sizes:</Text>
+                {currentComponent.sizes && (
+                  <div>
+                    <Text variant="small" className="font-semibold mb-2">Sizes:</Text>
                     <div className="flex flex-wrap gap-2">
-                      {component.sizes.map((size) => (
+                      {currentComponent.sizes.map((size) => (
                         <span key={size} className="text-xs bg-gray-100 px-2 py-1 rounded">
                           {size}
                         </span>
@@ -419,13 +544,81 @@ export default function BrandPage() {
                   </div>
                 )}
 
-                {component.usage && (
+                {currentComponent.backgrounds && (
+                  <div>
+                    <Text variant="small" className="font-semibold mb-2">Backgrounds:</Text>
+                    <div className="flex flex-wrap gap-2">
+                      {currentComponent.backgrounds.map((bg) => (
+                        <span key={bg} className="text-xs bg-gray-100 px-2 py-1 rounded">
+                          {bg}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentComponent.features && (
+                  <div>
+                    <Text variant="small" className="font-semibold mb-2">Features:</Text>
+                    <div className="flex flex-wrap gap-2">
+                      {currentComponent.features.map((feature) => (
+                        <span key={feature} className="text-xs bg-gray-100 px-2 py-1 rounded">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentComponent.columns && (
+                  <div>
+                    <Text variant="small" className="font-semibold mb-2">Columns:</Text>
+                    <div className="flex flex-wrap gap-2">
+                      {currentComponent.columns.map((column) => (
+                        <span key={column} className="text-xs bg-gray-100 px-2 py-1 rounded">
+                          {column}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentComponent.components && (
+                  <div>
+                    <Text variant="small" className="font-semibold mb-2">Components:</Text>
+                    <div className="flex flex-wrap gap-2">
+                      {currentComponent.components.map((comp) => (
+                        <span key={comp} className="text-xs bg-gray-100 px-2 py-1 rounded">
+                          {comp}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentComponent.usage && (
                   <Text variant="small" className="text-gray-600 italic">
-                    Usage: {component.usage}
+                    Usage: {currentComponent.usage}
                   </Text>
                 )}
-              </Card>
-            ))}
+              </div>
+
+              {/* Carousel Dots */}
+              <div className="flex justify-center gap-2 mt-6">
+                {components.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentComponentIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      index === currentComponentIndex
+                        ? 'bg-primary-600'
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Go to component ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </Card>
           </div>
         </Container>
       </Section>
