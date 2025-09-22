@@ -16,6 +16,7 @@ const footerLinks = {
       { name: "Mission", href: "/about#mission" },
       { name: "Governance", href: "/about#governance" },
       { name: "501(c)(6) Status", href: "/about#status" },
+      { name: "Brand Guidelines", href: "/brand" },
     ],
   },
   getInvolved: {
