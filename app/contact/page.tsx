@@ -4,39 +4,12 @@ import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import { Heading, Text } from "@/components/ui/Typography";
 import Button from "@/components/ui/Button";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact - Industry Commons for Defense",
   description: "Get in touch with the ICD Foundation for membership, consulting, partnerships, or general inquiries.",
 };
 
-const contactMethods = [
-  {
-    icon: Mail,
-    title: "Email",
-    details: "contact@icd-defense.org",
-    description: "Primary contact for all inquiries"
-  },
-  {
-    icon: Phone,
-    title: "Phone",
-    details: "+1 (555) 123-4567",
-    description: "Business hours: Monday - Friday"
-  },
-  {
-    icon: MapPin,
-    title: "Headquarters",
-    details: "Washington, D.C.",
-    description: "Metro area office locations"
-  },
-  {
-    icon: Clock,
-    title: "Response Time",
-    details: "24-48 hours",
-    description: "We respond to all inquiries promptly"
-  }
-];
 
 export default function ContactPage() {
   return (
@@ -176,38 +149,8 @@ export default function ContactPage() {
               </form>
             </Card>
 
-            {/* Contact Information */}
+            {/* Quick Links */}
             <div className="space-y-8">
-              <Card variant="filled" padding="lg">
-                <Heading level="h3" className="mb-6">
-                  Get in Touch
-                </Heading>
-                <Text className="mb-6">
-                  Whether you&apos;re interested in membership, consulting services, or have questions about our framework, we&apos;re here to help.
-                </Text>
-
-                <div className="space-y-6">
-                  {contactMethods.map((method) => (
-                    <div key={method.title} className="flex items-start">
-                      <div className="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
-                        <method.icon className="w-6 h-6 text-primary-600" />
-                      </div>
-                      <div>
-                        <Heading level="h4" className="text-lg mb-1">
-                          {method.title}
-                        </Heading>
-                        <Text variant="base" className="font-medium mb-1">
-                          {method.details}
-                        </Text>
-                        <Text variant="small" className="text-neutral-600">
-                          {method.description}
-                        </Text>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-
               <Card variant="filled" padding="lg">
                 <Heading level="h3" className="mb-4">
                   Quick Links
