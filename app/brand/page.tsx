@@ -468,48 +468,174 @@ export default function BrandPage() {
 
       {/* Attribution Section */}
       <Section variant="default" background="white">
-        <Container size="md">
+        <Container size="lg">
           <Heading level="h2" className="mb-8">Open Source Attribution</Heading>
 
-          <Card variant="outlined" padding="lg">
+          <Card variant="outlined" padding="lg" className="mb-8">
             <Heading level="h3" className="mb-6">Technologies & Licenses</Heading>
 
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary-600 pl-4">
-                <Heading level="h4" className="mb-1">Next.js 15</Heading>
-                <Text variant="small">MIT License - Vercel, Inc.</Text>
-                <Text variant="small" className="text-gray-600">React framework for production</Text>
-              </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card variant="filled" padding="md" className="border-l-4 border-primary-600">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <Heading level="h4" className="mb-1">Next.js 15</Heading>
+                    <Text variant="small" className="text-gray-600">MIT License - Vercel, Inc.</Text>
+                    <Text variant="small" className="text-gray-500 mb-2">React framework for production</Text>
+                  </div>
+                  <a
+                    href="https://nextjs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 ml-2"
+                    aria-label="Visit Next.js website"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <a
+                  href="https://github.com/vercel/next.js"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-600 hover:text-primary-700 underline"
+                >
+                  GitHub
+                </a>
+              </Card>
 
-              <div className="border-l-4 border-primary-600 pl-4">
-                <Heading level="h4" className="mb-1">React 19</Heading>
-                <Text variant="small">MIT License - Meta Platforms, Inc.</Text>
-                <Text variant="small" className="text-gray-600">JavaScript library for user interfaces</Text>
-              </div>
+              <Card variant="filled" padding="md" className="border-l-4 border-primary-600">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <Heading level="h4" className="mb-1">React 19</Heading>
+                    <Text variant="small" className="text-gray-600">MIT License - Meta Platforms, Inc.</Text>
+                    <Text variant="small" className="text-gray-500 mb-2">JavaScript library for user interfaces</Text>
+                  </div>
+                  <a
+                    href="https://react.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 ml-2"
+                    aria-label="Visit React website"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <a
+                  href="https://github.com/facebook/react"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-600 hover:text-primary-700 underline"
+                >
+                  GitHub
+                </a>
+              </Card>
 
-              <div className="border-l-4 border-primary-600 pl-4">
-                <Heading level="h4" className="mb-1">Tailwind CSS</Heading>
-                <Text variant="small">MIT License - Tailwind Labs, Inc.</Text>
-                <Text variant="small" className="text-gray-600">Utility-first CSS framework</Text>
-              </div>
+              <Card variant="filled" padding="md" className="border-l-4 border-primary-600">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <Heading level="h4" className="mb-1">Tailwind CSS</Heading>
+                    <Text variant="small" className="text-gray-600">MIT License - Tailwind Labs, Inc.</Text>
+                    <Text variant="small" className="text-gray-500 mb-2">Utility-first CSS framework</Text>
+                  </div>
+                  <a
+                    href="https://tailwindcss.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 ml-2"
+                    aria-label="Visit Tailwind CSS website"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <a
+                  href="https://github.com/tailwindlabs/tailwindcss"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-600 hover:text-primary-700 underline"
+                >
+                  GitHub
+                </a>
+              </Card>
 
-              <div className="border-l-4 border-primary-600 pl-4">
-                <Heading level="h4" className="mb-1">Lucide Icons</Heading>
-                <Text variant="small">ISC License - Lucide Contributors</Text>
-                <Text variant="small" className="text-gray-600">Open source icon library</Text>
-              </div>
+              <Card variant="filled" padding="md" className="border-l-4 border-primary-600">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <Heading level="h4" className="mb-1">Lucide Icons</Heading>
+                    <Text variant="small" className="text-gray-600">ISC License - Lucide Contributors</Text>
+                    <Text variant="small" className="text-gray-500 mb-2">Open source icon library</Text>
+                  </div>
+                  <a
+                    href="https://lucide.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 ml-2"
+                    aria-label="Visit Lucide Icons website"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <a
+                  href="https://github.com/lucide-icons/lucide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-600 hover:text-primary-700 underline"
+                >
+                  GitHub
+                </a>
+              </Card>
 
-              <div className="border-l-4 border-primary-600 pl-4">
-                <Heading level="h4" className="mb-1">Playfair Display</Heading>
-                <Text variant="small">Open Font License - Claus Eggers Sørensen</Text>
-                <Text variant="small" className="text-gray-600">Display typeface via Google Fonts</Text>
-              </div>
+              <Card variant="filled" padding="md" className="border-l-4 border-primary-600">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <Heading level="h4" className="mb-1">Playfair Display</Heading>
+                    <Text variant="small" className="text-gray-600">Open Font License - Claus Eggers Sørensen</Text>
+                    <Text variant="small" className="text-gray-500 mb-2">Display typeface via Google Fonts</Text>
+                  </div>
+                  <a
+                    href="https://fonts.google.com/specimen/Playfair+Display"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 ml-2"
+                    aria-label="View Playfair Display on Google Fonts"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <a
+                  href="https://github.com/clauseggers/Playfair-Display"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-600 hover:text-primary-700 underline"
+                >
+                  GitHub
+                </a>
+              </Card>
 
-              <div className="border-l-4 border-primary-600 pl-4">
-                <Heading level="h4" className="mb-1">Source Sans 3</Heading>
-                <Text variant="small">Open Font License - Adobe Systems</Text>
-                <Text variant="small" className="text-gray-600">Sans-serif typeface via Google Fonts</Text>
-              </div>
+              <Card variant="filled" padding="md" className="border-l-4 border-primary-600">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <Heading level="h4" className="mb-1">Source Sans 3</Heading>
+                    <Text variant="small" className="text-gray-600">Open Font License - Adobe Systems</Text>
+                    <Text variant="small" className="text-gray-500 mb-2">Sans-serif typeface via Google Fonts</Text>
+                  </div>
+                  <a
+                    href="https://fonts.google.com/specimen/Source+Sans+3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 ml-2"
+                    aria-label="View Source Sans 3 on Google Fonts"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <a
+                  href="https://github.com/adobe-fonts/source-sans"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-600 hover:text-primary-700 underline"
+                >
+                  GitHub
+                </a>
+              </Card>
             </div>
 
             <div className="mt-8 p-4 bg-gray-50 rounded-lg">
