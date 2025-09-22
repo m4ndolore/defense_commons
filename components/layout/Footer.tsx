@@ -62,7 +62,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white/80 hover:text-icd-gold transition-colors duration-200"
+                    className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white/80 hover:text-icd-gold transition-colors duration-200"
+                    className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white/80 hover:text-icd-gold transition-colors duration-200"
+                    className="text-white hover:text-yellow-300 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -118,18 +118,18 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-icd-gold transition-colors duration-200"
+                  className="text-white hover:text-yellow-300 transition-colors duration-200"
                 >
                   {link.name}
                 </a>
               ))}
             </div>
-            <p className="text-sm text-white/80">
+            <p className="text-sm text-white">
               Contact:
               <br />
               <a
                 href="mailto:contact@icd-defense.org"
-                className="text-white/80 hover:text-icd-gold transition-colors duration-200"
+                className="text-white hover:text-yellow-300 transition-colors duration-200"
               >
                 contact@icd-defense.org
               </a>
@@ -137,7 +137,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm text-white/70">
+        <div className="border-t border-white/30 mt-8 pt-8 text-center text-sm text-white/95">
           <p>
             © {currentYear} The ICD Foundation. All rights reserved. Licensed
             under SW-ICD License v1.0
