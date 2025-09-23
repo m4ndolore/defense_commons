@@ -201,7 +201,7 @@ export default function AAFPathways() {
         {/* AAF Reference */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-600">
-            Based on DoD Instruction 5000.02 - Operation of the Adaptive Acquisition Framework
+            Based on DoW Instruction 5000.02 - Operation of the Adaptive Acquisition Framework
           </p>
         </div>
       </div>

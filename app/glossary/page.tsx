@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const glossaryTerms = [
   {
     term: "Adaptive Acquisition Framework (AAF)",
-    definition: "DoD's structured approach with six distinct acquisition pathways designed to deliver effective, suitable, survivable, sustainable, and affordable solutions in a timely manner.",
+    definition: "DoW's structured approach with six distinct acquisition pathways designed to deliver effective, suitable, survivable, sustainable, and affordable solutions in a timely manner.",
     category: "Acquisition"
   },
   {
@@ -97,7 +97,7 @@ const glossaryTerms = [
   },
   {
     term: "Software Acquisition Pathway (SWP)",
-    definition: "AAF pathway designated as the preferred approach for all software development components of business and weapon system programs in DoD (as of March 2025).",
+    definition: "AAF pathway designated as the preferred approach for all software development components of business and weapon system programs in DoW (as of March 2025).",
     category: "Acquisition"
   },
   {
@@ -157,7 +157,7 @@ export default function GlossaryPage() {
         <Container size="lg">
           <div className="mb-8">
             <Text className="text-center text-gray-600 mb-8">
-              This glossary ensures alignment with official ICD artifacts, DoD policy documents,
+              This glossary ensures alignment with official ICD artifacts, DoW policy documents,
               and current legislation affecting defense technology collaboration.
             </Text>
           </div>
@@ -211,9 +211,9 @@ export default function GlossaryPage() {
             </Text>
             <ul className="text-gray-700 space-y-1 text-sm">
               <li>• ICD Artifacts Repository (github.com/industry-commons-for-defense/icd-artifacts)</li>
-              <li>• DoD Instruction 5000.02: Operation of the Adaptive Acquisition Framework</li>
+              <li>• DoW Instruction 5000.02: Operation of the Adaptive Acquisition Framework</li>
               <li>• SHARE-IT Act (H.R.9566) - Source Code Harmonization And Reuse in IT</li>
-              <li>• Current DoD acquisition policy and guidance documents</li>
+              <li>• Current DoW acquisition policy and guidance documents</li>
             </ul>
           </div>
         </Container>

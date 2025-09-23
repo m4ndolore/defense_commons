@@ -200,8 +200,14 @@ export default function FrameworkPage() {
               SHARE-IT Act Compliance
             </h3>
             <p className="text-gray-700 mb-6">
-              The ICD Framework directly supports the Securing Hazardous Activities through Rigorous Examination
-              and Information Technology (SHARE-IT) Act by enabling transparent, auditable software collaboration
+              The ICD Framework directly supports the <a
+                href="https://www.congress.gov/bill/118th-congress/house-bill/9566"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-700 hover:text-blue-900 underline font-medium"
+              >
+                Source Code Harmonization And Reuse in Information Technology (SHARE-IT) Act
+              </a> by enabling transparent, auditable software collaboration
               that maintains security while accelerating innovation.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
@@ -368,7 +374,7 @@ export default function FrameworkPage() {
             {/* Pathway 4: Software Acquisition Pathway */}
             <div className="mb-8">
               <div className="bg-white border-l-4 border-orange-500 p-6 rounded-lg mb-4">
-                <h4 className="text-lg font-semibold mb-3 text-orange-700">Pathway 4: Software Acquisition Pathway (SwAP)</h4>
+                <h4 className="text-lg font-semibold mb-3 text-orange-700">Pathway 4: Software Acquisition Pathway (SWP)</h4>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h5 className="font-medium mb-2 text-gray-800">AAF Requirements</h5>
@@ -464,7 +470,7 @@ export default function FrameworkPage() {
                 <div className="mt-4 bg-indigo-50 p-4 rounded">
                   <p className="text-sm text-indigo-800">
                     <strong>Example:</strong> Multi-vendor cybersecurity services integrated through ICD framework
-                    enabling seamless threat intelligence sharing and coordinated response across DoD enterprise.
+                    enabling seamless threat intelligence sharing and coordinated response across DoW enterprise.
                   </p>
                 </div>
               </div>

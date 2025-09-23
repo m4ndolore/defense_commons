@@ -15,7 +15,7 @@ const shareItFeatures = [
   {
     icon: Users,
     title: "Cross-Agency Collaboration",
-    description: "Enables seamless collaboration between DoD, federal agencies, and authorized contractors while maintaining proper access controls."
+    description: "Enables seamless collaboration between DoW, federal agencies, and authorized contractors while maintaining proper access controls."
   },
   {
     icon: BarChart,
@@ -43,7 +43,14 @@ export default function ShareITSection() {
             About the SHARE-IT Act (H.R.9566)
           </h3>
           <p className="text-gray-700 mb-4">
-            The SHARE-IT Act requires federal agencies to share custom-developed software code
+            The <a
+              href="https://www.congress.gov/bill/118th-congress/house-bill/9566"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-800 hover:text-primary-900 underline font-medium"
+            >
+              SHARE-IT Act
+            </a> requires federal agencies to share custom-developed software code
             to reduce duplication, lower costs, and improve government technology efficiency.
             The Act mandates:
           </p>
@@ -151,7 +158,7 @@ export default function ShareITSection() {
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-6">
               <div className="text-3xl font-bold text-primary-800 mb-2">$2.4B</div>
-              <p className="text-gray-600">Projected annual savings across DoD</p>
+              <p className="text-gray-600">Projected annual savings across DoW</p>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-6">
               <div className="text-3xl font-bold text-primary-800 mb-2">100%</div>
