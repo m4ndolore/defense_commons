@@ -35,7 +35,7 @@ export default function CTASection() {
             href="/contact"
             variant="secondary"
             size="lg"
-            className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
+            className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200"
           >
             Contact Us
           </Button>

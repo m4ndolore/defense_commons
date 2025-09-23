@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: any = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,11 +10,23 @@ export default {
     'bg-icd-purple',
     'bg-icd-gold',
     'bg-icd-green',
+    'bg-primary-800',
+    'bg-primary-100',
+    'bg-primary-50',
+    'bg-red-600',
+    'bg-blue-600',
+    'bg-indigo-600',
     'text-icd-purple',
     'text-icd-gold',
     'text-icd-green',
     'text-icd-blue',
-    'text-icd-red'
+    'text-icd-red',
+    'text-primary-200',
+    'text-primary-800',
+    'text-primary-900',
+    'border-white',
+    'hover:bg-white',
+    'hover:text-primary-950'
   ],
   theme: {
     extend: {
@@ -61,4 +73,6 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;

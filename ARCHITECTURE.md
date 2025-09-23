@@ -18,10 +18,11 @@ icd-website/
 │
 ├── components/            # React components
 │   ├── home/             # Homepage-specific sections
+│   │   ├── AAFPathways.tsx
 │   │   ├── Benefits.tsx
 │   │   ├── CoreComponents.tsx
 │   │   ├── Hero.tsx
-│   │   └── ROISection.tsx
+│   │   └── ShareITSection.tsx
 │   ├── layout/           # Layout components
 │   │   ├── Footer.tsx
 │   │   └── Header.tsx

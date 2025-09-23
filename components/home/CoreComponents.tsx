@@ -6,30 +6,30 @@ const features = [
     description:
       "Cyber-hardened framework with trusted AI capabilities and comprehensive audit trails",
     icon: Shield,
-    color: "text-primary-800",
-    bgColor: "bg-primary-800",
+    color: "text-purple-800",
+    bgColor: "bg-purple-800",
   },
   {
     title: "Rapid Deployment",
     description:
       "Deliver MVPs in under 12 months with modular, reusable components",
     icon: Zap,
-    color: "text-icd-gold",
-    bgColor: "bg-icd-gold",
+    color: "text-amber-500",
+    bgColor: "bg-amber-500",
   },
   {
     title: "Multi-Stakeholder",
     description:
       "Unite government, industry, FFRDCs, and allies in collaborative innovation",
     icon: Users,
-    color: "text-icd-green",
-    bgColor: "bg-icd-green",
+    color: "text-emerald-600",
+    bgColor: "bg-emerald-600",
   },
 ];
 
 export default function CoreComponents() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" data-testid="core-components">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-display font-bold text-center mb-12 text-gray-900">
           Core Components
