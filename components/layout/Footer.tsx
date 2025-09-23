@@ -62,7 +62,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white hover:text-primary-200 transition-colors duration-200"
+                    className="text-white hover:text-gray-300 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white hover:text-primary-200 transition-colors duration-200"
+                    className="text-white hover:text-gray-300 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white hover:text-primary-200 transition-colors duration-200"
+                    className="text-white hover:text-gray-300 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary-200 hover:text-white transition-colors duration-200"
+                  className="text-white hover:text-gray-300 transition-colors duration-200"
                 >
                   {link.name}
                 </a>
@@ -129,7 +129,7 @@ export default function Footer() {
               <br />
               <a
                 href="mailto:contact@icd-defense.org"
-                className="text-primary-200 hover:text-white transition-colors duration-200"
+                className="text-white hover:text-gray-300 transition-colors duration-200"
               >
                 contact@icd-defense.org
               </a>

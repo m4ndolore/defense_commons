@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   description: "A collaborative framework enabling transparent, modular, and sovereign-aligned collaboration across government, FFRDCs, UARCs, and industry partners in defense technology development.",
   keywords: "ICD, Industry Commons for Defense, defense technology, collaboration framework, FFRDC, UARC",
   authors: [{ name: "The ICD Foundation" }],
-  icons: {
-    icon: "/icd-logo.jpeg",
-    shortcut: "/icd-logo.jpeg",
-    apple: "/icd-logo.jpeg",
-  },
+  icons: [
+    { rel: 'icon', url: '/favicon.ico' },
+    { rel: 'icon', url: '/icd-logo.jpeg', sizes: '32x32', type: 'image/jpeg' },
+    { rel: 'apple-touch-icon', url: '/icd-logo.jpeg' },
+  ],
   openGraph: {
     title: "Industry Commons for Defense",
     description: "Accelerate innovation, enhance security, and build the future of defense technology together.",
