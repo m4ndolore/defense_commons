@@ -39,7 +39,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-950 text-white hero-high-contrast relative overflow-hidden">
+    <footer className="bg-primary-950 relative overflow-hidden" style={{ backgroundColor: '#2e1065', color: '#ffffff' }}>
       {/* Subtle accent border at top */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-icd-gold via-icd-green to-icd-blue"></div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white font-display font-semibold mb-4">
+            <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
               {footerLinks.perspectives.title}
             </h3>
             <ul className="space-y-2 text-sm">
@@ -62,7 +62,8 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
+                    className="hover:opacity-80 transition-opacity duration-200"
+                    style={{ color: '#ffffff' }}
                   >
                     {link.name}
                   </Link>
@@ -72,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-display font-semibold mb-4">
+            <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
               {footerLinks.about.title}
             </h3>
             <ul className="space-y-2 text-sm">
@@ -80,7 +81,8 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
+                    className="hover:opacity-80 transition-opacity duration-200"
+                    style={{ color: '#ffffff' }}
                   >
                     {link.name}
                   </Link>
@@ -90,7 +92,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-display font-semibold mb-4">
+            <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
               {footerLinks.getInvolved.title}
             </h3>
             <ul className="space-y-2 text-sm">
@@ -98,7 +100,8 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white hover:text-gray-300 transition-colors duration-200"
+                    className="hover:opacity-80 transition-opacity duration-200"
+                    style={{ color: '#ffffff' }}
                   >
                     {link.name}
                   </Link>
@@ -108,7 +111,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-display font-semibold mb-4">
+            <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
               Connect
             </h3>
             <div className="flex space-x-4 mb-4">
@@ -124,7 +127,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <p className="text-sm text-white">
+            <p className="text-sm" style={{ color: '#ffffff' }}>
               Contact:
               <br />
               <a
@@ -137,7 +140,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/30 mt-8 pt-8 text-center text-sm text-white/95">
+        <div className="border-t border-white/30 mt-8 pt-8 text-center text-sm" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
           <p>
             © {currentYear} The ICD Foundation. All rights reserved. Licensed
             under SW-ICD License v1.0

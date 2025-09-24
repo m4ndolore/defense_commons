@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   keywords: "ICD, Industry Commons for Defense, defense technology, collaboration framework, FFRDC, UARC",
   authors: [{ name: "The ICD Foundation" }],
   icons: {
-    icon: '/icd-logo.jpeg',
-    shortcut: '/icd-logo.jpeg',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/icd-logo.jpeg',
   },
   openGraph: {
