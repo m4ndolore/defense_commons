@@ -14,6 +14,7 @@ interface ButtonProps {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  inlineStyle?: React.CSSProperties;
 }
 
 export default function Button({
@@ -26,7 +27,8 @@ export default function Button({
   onClick,
   className,
   type = 'button',
-  disabled = false
+  disabled = false,
+  inlineStyle
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
@@ -48,7 +50,7 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} style={inlineStyle}>
         {children}
       </Link>
     );
@@ -60,6 +62,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       className={classes}
+      style={inlineStyle}
     >
       {children}
     </button>

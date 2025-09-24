@@ -1508,7 +1508,7 @@ export default function ComponentsPage() {
       <Section variant="spacious" background="gradient">
         <Container size="md">
           <div className="text-center text-white">
-            <Heading level="h1" className="mb-6 text-white">
+            <Heading level="h1" className="mb-6 !text-white">
               ICD Framework Components
             </Heading>
             <Text variant="large" className="mb-8 text-white">
@@ -1530,7 +1530,7 @@ export default function ComponentsPage() {
                 variant="secondary"
                 style="outline"
                 size="lg"
-                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Archive

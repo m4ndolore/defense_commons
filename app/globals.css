@@ -193,3 +193,13 @@ a:hover {
 .hero-accent-glow {
   box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
 }
+
+/* Secondary button on dark background styling */
+.btn-secondary-on-dark {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.btn-secondary-on-dark:hover {
+  color: #2e1065 !important;
+}

@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import Button from "@/components/ui/Button";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
+import { Heading, Text } from "@/components/ui/Typography";
 
 export const metadata: Metadata = {
   title: "ICD Collaborative Framework - Industry Commons for Defense",
@@ -62,23 +65,45 @@ const architecturalPrinciples = [
 
 export default function FrameworkPage() {
   return (
-    <div className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <section className="mb-16">
-          <h1 className="text-4xl font-display font-bold mb-8 text-gray-900 text-center">
-            The ICD Collaborative Framework
-          </h1>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-xl text-gray-600">
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <Section variant="spacious" background="gradient" className="text-center">
+        <Container size="md">
+          <div className="text-center text-white">
+            <Heading level="h1" className="mb-6 !text-white">
+              The ICD Collaborative Framework
+            </Heading>
+            <p className="text-lg sm:text-xl mb-8 font-light leading-relaxed text-white/95 max-w-3xl mx-auto">
               A modern collaborative framework for open, modular, and secure co-development of dual-use technologies, designed for software-defined warfare, peer competition, and agile acquisition mandates.
             </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                href="/contact"
+                variant="secondary"
+                size="lg"
+                className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
+              >
+                Get Started
+              </Button>
+              <Button
+                href="/contact"
+                variant="secondary"
+                size="lg"
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
+              >
+                Learn More
+              </Button>
+            </div>
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-display font-bold mb-8 text-gray-900">
+      {/* Core Components */}
+      <Section variant="default" background="white">
+        <Container size="lg">
+          <Heading level="h2" className="mb-8">
             Core Components
-          </h2>
+          </Heading>
           <div className="grid lg:grid-cols-2 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-display font-semibold mb-4">
@@ -109,12 +134,15 @@ export default function FrameworkPage() {
               </ul>
             </div>
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-display font-bold mb-12 text-gray-900">
+      {/* Licensing Models */}
+      <Section variant="default" background="gray">
+        <Container size="lg">
+          <Heading level="h2" className="mb-12">
             Licensing Models
-          </h2>
+          </Heading>
           <div className="grid md:grid-cols-2 gap-8">
             {licenses.map((license) => (
               <div key={license.title} className={`border-2 ${license.color} rounded-lg p-6 hover:shadow-lg transition-shadow`}>
@@ -135,12 +163,15 @@ export default function FrameworkPage() {
               </div>
             ))}
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-display font-bold mb-8 text-gray-900">
+      {/* Technical Architecture */}
+      <Section variant="default" background="white">
+        <Container size="lg">
+          <Heading level="h2" className="mb-8">
             Technical Architecture
-          </h2>
+          </Heading>
           <div className="bg-gray-50 p-8 rounded-lg mb-8">
             <h3 className="text-xl font-display font-semibold mb-6">
               Architectural Principles
@@ -154,12 +185,15 @@ export default function FrameworkPage() {
               ))}
             </div>
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-display font-bold mb-8 text-gray-900">
+      {/* Implementation Phases */}
+      <Section variant="default" background="gray">
+        <Container size="lg">
+          <Heading level="h2" className="mb-8">
             Implementation Phases
-          </h2>
+          </Heading>
           <div className="space-y-6">
             <div className="flex items-start">
               <div className="bg-icd-purple text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 font-semibold">
@@ -189,12 +223,15 @@ export default function FrameworkPage() {
               </div>
             </div>
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-display font-bold mb-8 text-gray-900">
+      {/* Supporting Federal Law and Policy */}
+      <Section variant="default" background="white">
+        <Container size="lg">
+          <Heading level="h2" className="mb-8">
             Supporting Federal Law and Policy
-          </h2>
+          </Heading>
           <div className="bg-blue-50 p-8 rounded-lg mb-8">
             <h3 className="text-xl font-display font-semibold mb-6 text-blue-800">
               SHARE-IT Act Compliance
@@ -501,30 +538,37 @@ export default function FrameworkPage() {
               </div>
             </div>
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-display font-bold mb-8 text-gray-900">
+      {/* License and Rights Comparison */}
+      <Section variant="default" background="gray">
+        <Container size="lg">
+          <Heading level="h2" className="mb-8">
             License and Rights Comparison
-          </h2>
+          </Heading>
           <p className="text-gray-600 mb-8 text-center max-w-3xl mx-auto">
             Understanding how ICD licensing compares to traditional open-source licenses and Federal Acquisition Regulation (FAR) data rights assertions.
           </p>
-          <div className="overflow-x-auto">
-            <table className="w-full border border-gray-200 rounded-lg">
-              <thead className="bg-gray-50">
+          <div className="overflow-x-auto bg-white rounded-xl shadow-xl border border-gray-200">
+            <table className="w-full">
+              <thead style={{backgroundColor: '#2e1065'}} className="text-white">
                 <tr>
-                  <th className="text-left p-4 font-semibold border-b border-gray-200">License/Rights Type</th>
-                  <th className="text-center p-4 font-semibold border-b border-gray-200">Government Rights</th>
-                  <th className="text-center p-4 font-semibold border-b border-gray-200">Industry IP Protection</th>
-                  <th className="text-center p-4 font-semibold border-b border-gray-200">Commercial Reuse</th>
-                  <th className="text-center p-4 font-semibold border-b border-gray-200">Compliance Automation</th>
-                  <th className="text-center p-4 font-semibold border-b border-gray-200">Collaborative Development</th>
+                  <th className="text-left px-6 py-4 font-bold text-base tracking-wide text-white">License/Rights Type</th>
+                  <th className="text-center px-4 py-4 font-bold text-sm text-white">Scope</th>
+                  <th className="text-center px-4 py-4 font-bold text-sm text-white">Government Rights</th>
+                  <th className="text-center px-4 py-4 font-bold text-sm text-white">Industry IP Protection</th>
+                  <th className="text-center px-4 py-4 font-bold text-sm text-white">Commercial Reuse</th>
+                  <th className="text-center px-4 py-4 font-bold text-sm text-white">Compliance Automation</th>
+                  <th className="text-center px-4 py-4 font-bold text-sm text-white">Collaborative Development</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-medium">SW-ICD License</td>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">SW-ICD License</td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">HW, SW, Data, Models</span>
+                  </td>
                   <td className="p-4 text-center">
                     <span className="text-green-600 font-semibold">Unlimited</span>
                   </td>
@@ -541,8 +585,11 @@ export default function FrameworkPage() {
                     <span className="text-green-600 font-semibold">Optimized</span>
                   </td>
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-medium">MIT License</td>
+                <tr className="bg-white hover:bg-gray-50">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">MIT License</td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">SW only</span>
+                  </td>
                   <td className="p-4 text-center">
                     <span className="text-green-600 font-semibold">Unlimited</span>
                   </td>
@@ -559,8 +606,11 @@ export default function FrameworkPage() {
                     <span className="text-yellow-600">Basic</span>
                   </td>
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-medium">Apache 2.0</td>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">Apache 2.0</td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">SW only</span>
+                  </td>
                   <td className="p-4 text-center">
                     <span className="text-green-600 font-semibold">Unlimited</span>
                   </td>
@@ -577,8 +627,11 @@ export default function FrameworkPage() {
                     <span className="text-yellow-600">Standard</span>
                   </td>
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-medium">GPL 3.0</td>
+                <tr className="bg-white hover:bg-gray-50">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">GPL 3.0</td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">SW only</span>
+                  </td>
                   <td className="p-4 text-center">
                     <span className="text-green-600 font-semibold">Unlimited</span>
                   </td>
@@ -595,8 +648,11 @@ export default function FrameworkPage() {
                     <span className="text-green-600 font-semibold">Strong</span>
                   </td>
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-medium">DFARS 252.227-7014<br/><span className="text-sm text-gray-500">(Unlimited Rights)</span></td>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">DFARS 252.227-7014<br/><span className="text-sm font-medium text-gray-600">(Unlimited Rights)</span></td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">HW, SW, Data</span>
+                  </td>
                   <td className="p-4 text-center">
                     <span className="text-green-600 font-semibold">Unlimited</span>
                   </td>
@@ -613,8 +669,11 @@ export default function FrameworkPage() {
                     <span className="text-red-600">Discouraged</span>
                   </td>
                 </tr>
-                <tr className="border-b border-gray-100">
-                  <td className="p-4 font-medium">DFARS 252.227-7013<br/><span className="text-sm text-gray-500">(Limited Rights)</span></td>
+                <tr className="bg-white hover:bg-gray-50">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">DFARS 252.227-7013<br/><span className="text-sm font-medium text-gray-600">(Limited Rights)</span></td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">HW, SW, Data</span>
+                  </td>
                   <td className="p-4 text-center">
                     <span className="text-yellow-600">Restricted</span>
                   </td>
@@ -631,8 +690,53 @@ export default function FrameworkPage() {
                     <span className="text-red-600">Blocked</span>
                   </td>
                 </tr>
-                <tr>
-                  <td className="p-4 font-medium">Commercial License<br/><span className="text-sm text-gray-500">(Typical)</span></td>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">DFARS 252.227-7017<br/><span className="text-sm font-medium text-gray-600">(Restricted Rights)</span></td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">SW only</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-red-600">Minimal</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-green-600 font-semibold">Complete</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-red-600">Blocked</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-red-600">Manual</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-red-600">Blocked</span>
+                  </td>
+                </tr>
+                <tr className="bg-white hover:bg-gray-50">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">DFARS 252.227-7018<br/><span className="text-sm font-medium text-gray-600">(Government Purpose Rights)</span></td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">HW, SW, Data</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-yellow-600">Moderate</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-green-600 font-semibold">Strong</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-yellow-600">Restricted</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-red-600">Manual</span>
+                  </td>
+                  <td className="p-4 text-center">
+                    <span className="text-yellow-600">Limited</span>
+                  </td>
+                </tr>
+                <tr className="bg-gray-50 hover:bg-gray-100">
+                  <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">Commercial License<br/><span className="text-sm font-medium text-gray-600">(Typical)</span></td>
+                  <td className="p-4 text-center">
+                    <span className="text-blue-600 font-semibold">Variable</span>
+                  </td>
                   <td className="p-4 text-center">
                     <span className="text-red-600">None</span>
                   </td>
@@ -669,36 +773,41 @@ export default function FrameworkPage() {
               </div>
             </div>
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        <section className="bg-icd-purple text-white p-8 rounded-lg">
-          <h2 className="text-2xl font-display font-bold mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="mb-6">
-            Join the growing community of organizations leveraging the ICD Framework for defense innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              href="/get-started"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-primary-800 hover:bg-gray-100"
-            >
-              Get Started
-            </Button>
-            <Button
-              href="/contact"
-              variant="secondary"
-              style="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary-800"
-            >
-              Contact Us
-            </Button>
+      {/* CTA Section */}
+      <Section variant="compact" background="gradient">
+        <Container size="md">
+          <div className="text-center text-white">
+            <Heading level="h2" className="mb-4 !text-white">
+              Ready to Get Started?
+            </Heading>
+            <Text variant="large" className="mb-8 text-white/90">
+              Join the growing community of organizations leveraging the ICD Framework for defense innovation.
+            </Text>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                href="/contact"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-primary-800 hover:bg-gray-100"
+              >
+                Get Started
+              </Button>
+              <Button
+                href="/contact"
+                variant="secondary"
+                style="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-primary-800"
+              >
+                Contact Us
+              </Button>
+            </div>
           </div>
-        </section>
-      </div>
+        </Container>
+      </Section>
     </div>
   );
 }

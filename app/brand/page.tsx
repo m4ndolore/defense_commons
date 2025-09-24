@@ -234,7 +234,7 @@ export default function BrandPage() {
       <Section variant="spacious" background="gradient">
         <Container size="md">
           <div className="text-center text-white">
-            <Heading level="h1" className="mb-6 text-white">
+            <Heading level="h1" className="mb-6 !text-white">
               ICD Foundation Brand Guidelines
             </Heading>
             <Text variant="large" className="text-white/95">
@@ -847,7 +847,7 @@ export default function BrandPage() {
       <Section variant="spacious" background="gradient">
         <Container size="sm">
           <div className="text-center">
-            <Heading level="h2" className="mb-6 text-white">
+            <Heading level="h2" className="mb-6 !text-white">
               Brand Resources
             </Heading>
             <Text variant="large" className="mb-8 text-white/95">
@@ -867,7 +867,7 @@ export default function BrandPage() {
                 href="https://github.com/industry-commons-for-defense/icd-website"
                 variant="secondary"
                 size="lg"
-                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 View on GitHub

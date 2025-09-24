@@ -1,30 +1,23 @@
 import Button from "@/components/ui/Button";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
+import { Heading, Text } from "@/components/ui/Typography";
 
 export default function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-primary-950 hero-high-contrast">
-      {/* Subtle accent border at top */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-icd-gold via-icd-green to-icd-blue"></div>
-
-      {/* Geometric accent elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 opacity-10">
-        <div className="w-full h-full bg-gradient-to-br from-icd-gold to-transparent rounded-full blur-3xl"></div>
-      </div>
-      <div className="absolute bottom-0 right-0 w-48 h-48 opacity-10">
-        <div className="w-full h-full bg-gradient-to-tr from-icd-green to-transparent rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl lg:text-4xl font-display font-bold mb-4" style={{ color: '#ffffff' }}>
-          Join the Industry Commons for Defense
-        </h2>
-        <p className="text-xl mb-8 font-light" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
-          Accelerate innovation, enhance security, and build the future of
-          defense technology together.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+    <Section variant="compact" background="gradient">
+      <Container size="md">
+        <div className="text-center text-white">
+          <Heading level="h2" className="mb-4 !text-white">
+            Join the Industry Commons for Defense
+          </Heading>
+          <Text variant="large" className="mb-8 text-white/90">
+            Accelerate innovation, enhance security, and build the future of
+            defense technology together.
+          </Text>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
-            href="/get-started"
+            href="/contact"
             variant="secondary"
             size="lg"
             className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
@@ -35,13 +28,13 @@ export default function CTASection() {
             href="/contact"
             variant="secondary"
             size="lg"
-            className="bg-transparent border-2 border-white hover:bg-white shadow-xl font-semibold transition-all duration-200"
-            style={{ color: '#ffffff', borderColor: '#ffffff' }}
+            className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
           >
             Contact Us
           </Button>
+          </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

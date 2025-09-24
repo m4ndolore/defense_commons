@@ -22,8 +22,8 @@ const footerLinks = {
   getInvolved: {
     title: "Get Started",
     links: [
-      { name: "Join ICD", href: "/get-started" },
-      { name: "Pilot Programs", href: "/get-started#onboarding" },
+      { name: "Join ICD", href: "/contact" },
+      { name: "Pilot Programs", href: "/contact#contact-form" },
       { name: "Contact Us", href: "/contact" },
     ],
   },
@@ -143,7 +143,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/30 mt-8 pt-8 text-center text-sm" style={{ color: '#ffffff' }}>
-          <p>
+          <p style={{ color: '#ffffff' }}>
             © {currentYear} The ICD Foundation. All rights reserved. Licensed
             under <a
               href="https://github.com/industry-commons-for-defense/icd-licenses/blob/main/SW-ICD-License-v1.0.txt"

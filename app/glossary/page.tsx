@@ -141,7 +141,7 @@ export default function GlossaryPage() {
       <Section variant="spacious" background="gradient">
         <Container size="md">
           <div className="text-center text-white">
-            <Heading level="h1" className="mb-6 text-white">
+            <Heading level="h1" className="mb-6 !text-white">
               ICD Glossary
             </Heading>
             <Text variant="large" className="mb-8 text-white">

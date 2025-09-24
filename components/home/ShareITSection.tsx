@@ -38,6 +38,17 @@ export default function ShareITSection() {
           </p>
         </div>
 
+        <div className="bg-primary-50 rounded-lg p-6 max-w-4xl mx-auto mb-12">
+          <h3 className="text-lg font-semibold text-primary-800 mb-2">
+            SHARE-IT Act Alignment
+          </h3>
+          <p className="text-primary-700">
+            ICD provides the concrete collaboration framework needed to implement SHARE-IT Act mandates,
+            enabling secure sharing of federally-funded software while protecting intellectual property
+            and maintaining national security requirements.
+          </p>
+        </div>
+
         <div className="bg-primary-50 rounded-lg p-8 mb-12">
           <h3 className="text-xl font-display font-semibold text-primary-900 mb-4">
             About the SHARE-IT Act (H.R.9566)

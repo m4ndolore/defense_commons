@@ -37,7 +37,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
-              href="/get-started"
+              href="/contact"
               variant="secondary"
               size="lg"
               className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
@@ -48,7 +48,7 @@ export default function Hero() {
               href="/framework"
               variant="secondary"
               size="lg"
-              className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
+              className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
             >
               Learn More
             </Button>

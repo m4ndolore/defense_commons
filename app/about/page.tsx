@@ -44,18 +44,6 @@ export default function AboutPage() {
                 <li className="flex items-start">
                   <span className="text-accent-green mr-2 text-xl">•</span>
                   <div>
-                    <strong className="text-neutral-900">Transparency:</strong> Open governance and clear decision-making processes
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent-green mr-2 text-xl">•</span>
-                  <div>
-                    <strong className="text-neutral-900">Security:</strong> Cyber-hardened frameworks with comprehensive audit trails
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent-green mr-2 text-xl">•</span>
-                  <div>
                     <strong className="text-neutral-900">Collaboration:</strong> Multi-stakeholder participation across government and industry
                   </div>
                 </li>
@@ -63,6 +51,18 @@ export default function AboutPage() {
                   <span className="text-accent-green mr-2 text-xl">•</span>
                   <div>
                     <strong className="text-neutral-900">Innovation:</strong> Rapid deployment of cutting-edge technologies
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-green mr-2 text-xl">•</span>
+                  <div>
+                    <strong className="text-neutral-900">Transparency:</strong> Open governance and clear decision-making processes
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-green mr-2 text-xl">•</span>
+                  <div>
+                    <strong className="text-neutral-900">Security:</strong> Cyber-hardened frameworks with comprehensive audit trails
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -136,7 +136,7 @@ export default function AboutPage() {
       <Section variant="compact" background="gradient">
         <Container size="sm">
           <div className="text-center">
-            <Heading level="h2" className="mb-4 text-white">
+            <Heading level="h2" className="mb-4 !text-white">
               Contact Information
             </Heading>
             <Text variant="large" className="text-white/90 mb-6">

@@ -96,7 +96,7 @@ export default function IndustryPage() {
       <Section variant="spacious" background="gradient">
         <Container size="md">
           <div className="text-center text-white">
-            <Heading level="h1" className="mb-6 text-white">
+            <Heading level="h1" className="mb-6 !text-white">
               Transform Defense Collaboration
             </Heading>
             <Text variant="large" className="mb-8 text-white/90">
@@ -105,7 +105,7 @@ export default function IndustryPage() {
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                href="/get-started"
+                href="/contact"
                 variant="secondary"
                 size="lg"
                 className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
@@ -115,9 +115,8 @@ export default function IndustryPage() {
               <Button
                 href="/contact"
                 variant="secondary"
-                style="outline"
                 size="lg"
-                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
               >
                 Schedule Consultation
               </Button>
@@ -157,7 +156,7 @@ export default function IndustryPage() {
           </Grid>
 
           <Card variant="filled" padding="lg" className="bg-red-50 border-red-200">
-            <Heading level="h3" className="mb-4 text-red-800">
+            <Heading level="h3" className="mb-4 text-red-800 text-center">
               The Cost of Status Quo
             </Heading>
             <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -167,7 +166,7 @@ export default function IndustryPage() {
               </div>
               <div>
                 <div className="text-2xl font-bold text-red-600 mb-2">30-50%</div>
-                <Text variant="small">R&D costs for compliance</Text>
+                <Text variant="small">Program compliance costs</Text>
               </div>
               <div>
                 <div className="text-2xl font-bold text-red-600 mb-2">Limited</div>
@@ -346,9 +345,9 @@ export default function IndustryPage() {
 
       {/* CTA */}
       <Section variant="compact" background="gradient">
-        <Container size="sm">
+        <Container size="md">
           <div className="text-center text-white">
-            <Heading level="h2" className="mb-4 text-white">
+            <Heading level="h2" className="mb-4 !text-white">
               Ready to Transform Your Defense Business?
             </Heading>
             <Text variant="large" className="mb-8 text-white/90">
@@ -356,7 +355,7 @@ export default function IndustryPage() {
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                href="/get-started"
+                href="/contact"
                 variant="secondary"
                 size="lg"
                 className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
@@ -366,9 +365,8 @@ export default function IndustryPage() {
               <Button
                 href="/contact"
                 variant="secondary"
-                style="outline"
                 size="lg"
-                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
               >
                 Schedule Demo
               </Button>

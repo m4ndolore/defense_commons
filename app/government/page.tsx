@@ -123,7 +123,7 @@ export default function GovernmentPage() {
       <Section variant="spacious" background="gradient">
         <Container size="md">
           <div className="text-center text-white">
-            <Heading level="h1" className="mb-6 text-white">
+            <Heading level="h1" className="mb-6 !text-white">
               Accelerate Defense Capability Delivery
             </Heading>
             <Text variant="large" className="mb-8 text-white/90">
@@ -132,7 +132,7 @@ export default function GovernmentPage() {
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                href="/get-started"
+                href="/contact"
                 variant="secondary"
                 size="lg"
                 className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
@@ -142,9 +142,8 @@ export default function GovernmentPage() {
               <Button
                 href="/contact"
                 variant="secondary"
-                style="outline"
                 size="lg"
-                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
               >
                 Request Briefing
               </Button>
@@ -170,15 +169,15 @@ export default function GovernmentPage() {
             <Grid cols={3} gap="lg" className="text-center">
               <div>
                 <div className="text-3xl font-bold text-red-600 mb-2">18-24 months</div>
-                <Text variant="small">Current acquisition timeline</Text>
+                <Text variant="base">Current acquisition timeline</Text>
               </div>
               <div>
-                <div className="text-3xl font-bold text-red-600 mb-2">6-12 months</div>
-                <Text variant="small">Technology refresh cycle</Text>
+                <div className="text-3xl font-bold text-red-600 mb-2">6-12+ months</div>
+                <Text variant="base">Technology refresh cycle</Text>
               </div>
               <div>
-                <div className="text-3xl font-bold text-green-600 mb-2">Capability Gap</div>
-                <Text variant="small">Window of vulnerability</Text>
+                <div className="text-3xl font-bold text-red-600 mb-2">Capability Gap</div>
+                <Text variant="base">Window of vulnerability</Text>
               </div>
             </Grid>
           </Card>
@@ -249,7 +248,7 @@ export default function GovernmentPage() {
               </div>
               <div>
                 <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <Text variant="small" className="font-medium">Continued Innovation</Text>
+                <Text variant="small" className="font-medium">Continuous Innovation</Text>
               </div>
             </div>
           </Card>
@@ -264,20 +263,20 @@ export default function GovernmentPage() {
           </Heading>
 
           <Card variant="outlined" padding="lg" className="mb-12">
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto bg-white rounded-xl shadow-xl border border-gray-200">
               <table className="w-full">
-                <thead>
-                  <tr className="border-b border-neutral-200">
-                    <th className="text-left p-4 font-semibold">Capability Area</th>
-                    <th className="text-center p-4 font-semibold">Traditional Acquisition</th>
-                    <th className="text-center p-4 font-semibold">ICD Framework</th>
-                    <th className="text-center p-4 font-semibold">Time Savings</th>
+                <thead style={{backgroundColor: '#2e1065'}} className="text-white">
+                  <tr>
+                    <th className="text-left px-6 py-4 font-bold text-base tracking-wide text-white">Capability Area</th>
+                    <th className="text-center px-4 py-4 font-bold text-sm text-white">Traditional Acquisition</th>
+                    <th className="text-center px-4 py-4 font-bold text-sm text-white">ICD Framework</th>
+                    <th className="text-center px-4 py-4 font-bold text-sm text-white">Time Savings</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {missionImpact.map((row) => (
-                    <tr key={row.capability} className="border-b border-neutral-100">
-                      <td className="p-4 font-medium">{row.capability}</td>
+                  {missionImpact.map((row, index) => (
+                    <tr key={row.capability} className={index % 2 === 0 ? "bg-gray-50 hover:bg-gray-100" : "bg-white hover:bg-gray-50"}>
+                      <td className="px-6 py-4 font-bold text-base text-primary-900 bg-primary-50 border-r-2 border-primary-200">{row.capability}</td>
                       <td className="p-4 text-center text-red-600">{row.traditional}</td>
                       <td className="p-4 text-center text-green-600">{row.icd}</td>
                       <td className="p-4 text-center font-semibold text-green-700">{row.improvement}</td>
@@ -319,7 +318,7 @@ export default function GovernmentPage() {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <AlertTriangle className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Multiple vendors developing incompatible C2 systems</span>
+                  <span>Multiple vendors developing stovepiped C2 systems</span>
                 </li>
                 <li className="flex items-start">
                   <AlertTriangle className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -327,7 +326,7 @@ export default function GovernmentPage() {
                 </li>
                 <li className="flex items-start">
                   <AlertTriangle className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Proprietary interfaces limiting future flexibility</span>
+                  <span>Closed or inaccessible interfaces limiting future flexibility</span>
                 </li>
                 <li className="flex items-start">
                   <AlertTriangle className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -444,17 +443,17 @@ export default function GovernmentPage() {
 
       {/* CTA */}
       <Section variant="compact" background="gradient">
-        <Container size="sm">
+        <Container size="md">
           <div className="text-center text-white">
-            <Heading level="h2" className="mb-4 text-white">
+            <Heading level="h2" className="mb-4 !text-white">
               Ready to Transform Defense Acquisition?
             </Heading>
             <Text variant="large" className="mb-8 text-white/90">
-              Join government leaders already leveraging ICD for faster, more secure capability delivery.
+              Join government leaders using ICD to accelerate delivery with full-lifecycle security and robust modularity.
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                href="/get-started"
+                href="/contact"
                 variant="secondary"
                 size="lg"
                 className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
@@ -464,9 +463,8 @@ export default function GovernmentPage() {
               <Button
                 href="/contact"
                 variant="secondary"
-                style="outline"
                 size="lg"
-                className="bg-transparent text-white border-2 border-icd-green hover:bg-icd-green hover:border-icd-green shadow-xl font-semibold transition-all duration-200"
+                className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
               >
                 Request Briefing
               </Button>
