@@ -229,13 +229,13 @@ export default function JoinPage() {
             <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
               <h3 className="text-lg font-semibold text-blue-800 mb-2">Rate Determination</h3>
               <p className="text-blue-700 text-sm">
-                Annual escalation is determined at membership renewal by comparing the 2% minimum rate with the Federal Reserve's published prime rate, applying whichever is higher.
+                Annual escalation is determined at membership renewal by comparing the 2% minimum rate with the Federal Reserve&apos;s published prime rate, applying whichever is higher.
               </p>
             </div>
             <div className="bg-green-50 rounded-lg p-6 border border-green-200">
               <h3 className="text-lg font-semibold text-green-800 mb-2">Revenue Sharing</h3>
               <p className="text-green-700 text-sm">
-                Excess revenues after capital investment and operating costs are returned to members as credits toward the following year's dues, effectively reducing net costs.
+                Excess revenues after capital investment and operating costs are returned to members as credits toward the following year&apos;s dues, effectively reducing net costs.
               </p>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function JoinPage() {
               Steering Body Member Benefits
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join the collaborative framework that's transforming defense technology development
+              Join the collaborative framework that&apos;s transforming defense technology development
             </p>
           </div>
 
