@@ -15,10 +15,10 @@ export default function CTASection() {
       </div>
 
       <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-4">
+        <h2 className="text-3xl lg:text-4xl font-display font-bold mb-4" style={{ color: '#ffffff' }}>
           Join the Industry Commons for Defense
         </h2>
-        <p className="text-xl text-white/95 mb-8 font-light">
+        <p className="text-xl mb-8 font-light" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
           Accelerate innovation, enhance security, and build the future of
           defense technology together.
         </p>
@@ -35,7 +35,8 @@ export default function CTASection() {
             href="/contact"
             variant="secondary"
             size="lg"
-            className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200"
+            className="bg-transparent border-2 border-white hover:bg-white shadow-xl font-semibold transition-all duration-200"
+            style={{ color: '#ffffff', borderColor: '#ffffff' }}
           >
             Contact Us
           </Button>

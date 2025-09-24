@@ -121,7 +121,8 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-gray-300 transition-colors duration-200"
+                  className="hover:opacity-80 transition-opacity duration-200"
+                  style={{ color: '#ffffff' }}
                 >
                   {link.name}
                 </a>
@@ -132,7 +133,8 @@ export default function Footer() {
               <br />
               <a
                 href="mailto:contact@icd-defense.org"
-                className="text-white hover:text-gray-300 transition-colors duration-200"
+                className="hover:opacity-80 transition-opacity duration-200"
+                style={{ color: '#ffffff' }}
               >
                 contact@icd-defense.org
               </a>
