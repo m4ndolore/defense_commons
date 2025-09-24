@@ -142,10 +142,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/30 mt-8 pt-8 text-center text-sm" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+        <div className="border-t border-white/30 mt-8 pt-8 text-center text-sm" style={{ color: '#ffffff' }}>
           <p>
             © {currentYear} The ICD Foundation. All rights reserved. Licensed
-            under SW-ICD License v1.0
+            under <a
+              href="https://github.com/industry-commons-for-defense/icd-licenses/blob/main/SW-ICD-License-v1.0.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:opacity-80 transition-opacity duration-200"
+              style={{ color: '#ffffff' }}
+            >
+              SW-ICD License v1.0
+            </a>
           </p>
         </div>
       </div>
