@@ -132,7 +132,7 @@ export default function AAFPathways() {
         </div>
 
         <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="p-8 md:p-12">
+          <div className="p-8 md:px-20 md:py-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <div className={`w-20 h-20 ${currentPathway.color} rounded-full flex items-center justify-center mb-6`}>
@@ -162,22 +162,22 @@ export default function AAFPathways() {
           </div>
 
           {/* Navigation Controls */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-4">
+          <div className="absolute top-1/2 -translate-y-1/2 left-2 md:left-4">
             <button
               onClick={handlePrevious}
-              className="p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-colors"
+              className="p-2 bg-white/95 hover:bg-white rounded-full shadow-lg transition-all hover:shadow-xl"
               aria-label="Previous pathway"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-700" />
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-700" />
             </button>
           </div>
-          <div className="absolute top-1/2 -translate-y-1/2 right-4">
+          <div className="absolute top-1/2 -translate-y-1/2 right-2 md:right-4">
             <button
               onClick={handleNext}
-              className="p-2 bg-white/90 hover:bg-white rounded-full shadow-lg transition-colors"
+              className="p-2 bg-white/95 hover:bg-white rounded-full shadow-lg transition-all hover:shadow-xl"
               aria-label="Next pathway"
             >
-              <ChevronRight className="w-6 h-6 text-gray-700" />
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-700" />
             </button>
           </div>
 
