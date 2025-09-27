@@ -19,7 +19,7 @@ export default function ClosingCTA() {
             size="lg"
             className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200"
           >
-            Member's Waitlist
+            Member&apos;s Waitlist
           </Button>
           <Button
             href="/components"
