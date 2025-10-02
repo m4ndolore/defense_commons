@@ -126,17 +126,25 @@
   background-color: var(--color-primary-700);
 }
 
-/* Ensure good contrast on all text */
-body {
+html, body {
+  font-family: var(--font-inter), Avenir, ui-sans-serif, system-ui, sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.6;
   background: var(--background);
   color: var(--color-text-primary);
-  font-family: var(--font-source-sans), system-ui, sans-serif;
-  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size-adjust: 100%;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-primary);
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-inter), Avenir, ui-sans-serif, system-ui, sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
 }
