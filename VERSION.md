@@ -64,7 +64,7 @@
 - Framework documentation with licensing models and technical architecture
 - Get Started guide with onboarding process
 - Contact information and social media integration
-- Professional typography using Playfair Display and Source Sans 3
+- Professional typography using Source Sans 3 for all text
 
 ### Technical Implementation
 - Static site generation for optimal performance
