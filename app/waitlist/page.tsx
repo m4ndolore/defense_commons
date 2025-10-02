@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import { Heading, Text } from "@/components/ui/Typography";
 import Button from "@/components/ui/Button";
+import { waitlistService } from '@/lib/firebase-waitlist';
 
 // export const metadata: Metadata = {
 //   title: "Join Waitlist - Industry Commons for Defense",
@@ -65,18 +66,29 @@ export default function WaitlistPage() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/api/waitlist', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // Validate required fields
+      if (!formData.email || !formData.firstName || !formData.lastName) {
+        throw new Error('Please fill in all required fields');
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        throw new Error('Please enter a valid email address');
+      }
+
+      // Add to Firebase waitlist
+      const result = await waitlistService.addToWaitlist({
+        email: formData.email,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        organization: formData.organization,
+        role: formData.role,
+        interestAreas: formData.interestAreas,
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to join waitlist');
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to join waitlist');
       }
 
       setSubmitStatus('success');
