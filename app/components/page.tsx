@@ -1482,33 +1482,33 @@ export default function ComponentsPage() {
   return (
     <>
       {/* Hero Section */}
-      <Section variant="spacious" background="gradient">
+      <Section variant="default" background="gradient" className="py-12">
         <Container size="md">
           <div className="text-center text-white">
-            <Heading level="h1" className="mb-6 text-white">
+            <Heading level="h1" className="mb-3 text-white">
               Components
             </Heading>
-            <Text variant="large" className="mb-8 text-white">
+            <Text variant="large" className="mb-6 text-white">
               What we use to make collaboration work: licenses, templates, governance, and specs.
             </Text>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button
                 href={baseGitHubUrl}
                 variant="secondary"
-                size="lg"
+                size="md"
                 className="bg-white text-primary-800 hover:bg-gray-100"
               >
-                <ExternalLink className="w-5 h-5 mr-2" />
+                <ExternalLink className="w-4 h-4 mr-2" />
                 View on GitHub
               </Button>
               <Button
                 href={`${baseGitHubUrl}/archive/refs/heads/main.zip`}
                 variant="secondary"
                 style="outline"
-                size="lg"
+                size="md"
                 className="border-white text-white hover:bg-white hover:text-primary-800"
               >
-                <Download className="w-5 h-5 mr-2" />
+                <Download className="w-4 h-4 mr-2" />
                 Download Archive
               </Button>
             </div>
@@ -1517,28 +1517,28 @@ export default function ComponentsPage() {
       </Section>
 
       {/* Repository Info */}
-      <Section variant="default" background="white">
+      <Section variant="default" background="white" className="py-8">
         <Container size="lg">
-          <Card variant="filled" padding="lg" className="bg-blue-50 border-blue-200 mb-12">
+          <Card variant="filled" padding="md" className="bg-blue-50 border-blue-200 mb-6">
             <div className="text-center">
-              <Heading level="h2" className="mb-4 text-blue-800">
+              <Heading level="h2" className="mb-2 text-blue-800">
                 ICD Artifacts Repository
               </Heading>
-              <Text className="mb-6">
+              <Text className="mb-4">
                 Data standards for building and sharing technology across government, labs, and industry.
               </Text>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-blue-600 mb-2">v1.0.0</div>
-                  <Text variant="small">Current Version</Text>
+                  <div className="text-xl font-bold text-blue-600 mb-1">v1.0.0</div>
+                  <Text variant="small" className="text-xs">Current Version</Text>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600 mb-2">May 2025</div>
-                  <Text variant="small">Release Date</Text>
+                  <div className="text-xl font-bold text-blue-600 mb-1">May 2025</div>
+                  <Text variant="small" className="text-xs">Release Date</Text>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600 mb-2">SW-ICD</div>
-                  <Text variant="small">Repository License</Text>
+                  <div className="text-xl font-bold text-blue-600 mb-1">SW-ICD</div>
+                  <Text variant="small" className="text-xs">Repository License</Text>
                 </div>
               </div>
             </div>
@@ -1548,31 +1548,31 @@ export default function ComponentsPage() {
 
       {/* Component Categories */}
       {componentCategories.map((category) => (
-        <Section key={category.title} variant="default" background="gray">
+        <Section key={category.title} variant="default" background="gray" className="py-6">
           <Container size="lg">
-            <div className="mb-12">
-              <div className="flex items-center mb-4">
-                <div className={`${category.bgColor} p-3 rounded-lg mr-4`}>
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
+            <div className="mb-6">
+              <div className="flex items-center mb-3">
+                <div className={`${category.bgColor} p-2 rounded-lg mr-3`}>
+                  <category.icon className={`w-6 h-6 ${category.color}`} />
                 </div>
                 <div>
-                  <Heading level="h2" className="mb-2">{category.title}</Heading>
-                  <Text className="text-neutral-600">{category.description}</Text>
+                  <Heading level="h2" className="mb-1">{category.title}</Heading>
+                  <Text className="text-neutral-600 text-sm">{category.description}</Text>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-3">
               {category.items.map((item) => (
-                <Card key={item.name} variant="filled" padding="lg" className={`border-2 ${category.borderColor}`}>
+                <Card key={item.name} variant="filled" padding="md" className={`border ${category.borderColor}`}>
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                     <div className="flex-1">
-                      <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-start justify-between">
                         <div>
-                          <Heading level="h3" className="mb-2">{item.name}</Heading>
-                          <Text className="mb-4">{item.description}</Text>
+                          <Heading level="h3" className="mb-1 text-lg">{item.name}</Heading>
+                          <Text className="mb-2 text-sm">{item.description}</Text>
                           {'type' in item && item.type && (
-                            <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${category.bgColor} ${category.color}`}>
+                            <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${category.bgColor} ${category.color}`}>
                               {item.type}
                             </span>
                           )}
@@ -1581,12 +1581,12 @@ export default function ComponentsPage() {
 
                       {/* License Content Accordion */}
                       {'content' in item && item.content && (
-                        <div className="mb-4">
+                        <div className="mb-2">
                           <AccordionComponent
                             title="View License Content"
                             content={
-                              <div className="bg-gray-50 p-4 rounded-lg">
-                                <pre className="text-sm text-gray-700 whitespace-pre-wrap font-mono">
+                              <div className="bg-gray-50 p-3 rounded">
+                                <pre className="text-xs text-gray-700 whitespace-pre-wrap font-mono leading-relaxed">
                                   {item.content}
                                 </pre>
                               </div>
@@ -1597,24 +1597,24 @@ export default function ComponentsPage() {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-2 lg:flex-col lg:w-48">
+                    <div className="flex gap-2">
                       <Button
                         href={`${baseGitHubUrl}/blob/main/${'fileName' in item ? item.fileName : ''}`}
                         variant="secondary"
                         size="sm"
-                        className="w-full"
+                        className="text-xs"
                       >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View on GitHub
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        GitHub
                       </Button>
                       <Button
                         href={`${rawGitHubUrl}/${'fileName' in item ? item.fileName : ''}`}
                         variant="secondary"
                         style="outline"
                         size="sm"
-                        className="w-full"
+                        className="text-xs"
                       >
-                        <Download className="w-4 h-4 mr-2" />
+                        <Download className="w-3 h-3 mr-1" />
                         Download
                       </Button>
                     </div>
@@ -1627,53 +1627,55 @@ export default function ComponentsPage() {
       ))}
 
       {/* Additional Resources */}
-      <Section variant="default" background="white">
+      <Section variant="default" background="white" className="py-8">
         <Container size="lg">
-          <Heading level="h2" className="mb-12 text-center">
+          <Heading level="h2" className="mb-6 text-center">
             Additional Resources
           </Heading>
 
-          <Grid cols={2} gap="lg">
-            <Card variant="outlined" padding="lg">
-              <Heading level="h3" className="mb-4">
+          <Grid cols={2} gap="md">
+            <Card variant="outlined" padding="md">
+              <Heading level="h3" className="mb-2 text-lg">
                 Contributing Guidelines
               </Heading>
-              <Text className="mb-4">
+              <Text className="mb-3 text-sm">
                 Learn how to contribute to the ICD artifacts repository and participate in the collaborative development process.
               </Text>
               <Button
                 href={`${baseGitHubUrl}/blob/main/CONTRIBUTING.md`}
                 variant="primary"
+                size="sm"
               >
-                <ExternalLink className="w-4 h-4 mr-2" />
+                <ExternalLink className="w-3 h-3 mr-1" />
                 View Guidelines
               </Button>
             </Card>
 
-            <Card variant="outlined" padding="lg">
-              <Heading level="h3" className="mb-4">
+            <Card variant="outlined" padding="md">
+              <Heading level="h3" className="mb-2 text-lg">
                 Support & Documentation
               </Heading>
-              <Text className="mb-4">
+              <Text className="mb-3 text-sm">
                 Access comprehensive documentation and support resources for implementing ICD framework components.
               </Text>
               <Button
                 href="/contact"
                 variant="primary"
+                size="sm"
               >
                 Get Support
               </Button>
             </Card>
           </Grid>
 
-          <Card variant="filled" padding="lg" className="mt-12 bg-yellow-50 border-yellow-200">
-            <Heading level="h3" className="mb-4 text-yellow-800">
+          <Card variant="filled" padding="md" className="mt-6 bg-yellow-50 border-yellow-200">
+            <Heading level="h3" className="mb-2 text-lg text-yellow-800">
               Compliance Requirements
             </Heading>
-            <Text className="mb-4">
+            <Text className="mb-3 text-sm">
               All components in this repository must comply with:
             </Text>
-            <ul className="list-disc pl-6 space-y-2 text-neutral-700">
+            <ul className="list-disc pl-5 space-y-1 text-sm text-neutral-700">
               <li>ICD licensing frameworks and attribution requirements</li>
               <li>U.S. export control regulations (ITAR/EAR)</li>
               <li>Classification guidelines and security protocols</li>
