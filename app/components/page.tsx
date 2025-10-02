@@ -10,7 +10,7 @@ import { FileText, Download, ExternalLink, Shield, Database, Cpu, Settings } fro
 
 export const metadata: Metadata = {
   title: "Components - Industry Commons for Defense",
-  description: "Explore the complete ICD framework components including licenses, templates, governance documents, and technical specifications.",
+  description: "What we use to make collaboration work: licenses, templates, governance, and specs.",
 };
 
 const componentCategories = [
@@ -23,8 +23,8 @@ const componentCategories = [
     borderColor: "border-green-200",
     items: [
       {
-        name: "SW-ICD License v1.0",
-        description: "Software Industry Commons for Defense License",
+        name: "Software",
+        description: "SW-ICD License v1.0",
         type: "Software",
         fileName: "SW-ICD_License_v1.0_May2025.txt",
         content: `# Software Industry Commons for Defense (SW-ICD) License
@@ -99,8 +99,8 @@ The ICD Steering Body may publish updates to this license. Contributors are enco
 *Issued under the authority of the Industry Commons for Defense Steering Body.*`
       },
       {
-        name: "HW-ICD License v1.0",
-        description: "Hardware Industry Commons for Defense License",
+        name: "Hardware",
+        description: "HW-ICD License v1.0",
         type: "Hardware",
         fileName: "HW-ICD_License_v1.0_May2025.txt",
         content: `# Hardware Industry Commons for Defense (HW-ICD) License
@@ -188,8 +188,8 @@ Governed by U.S. federal law and enforced by the ICD Steering Body with escalati
 *Issued under the authority of the Industry Commons for Defense Steering Body.*`
       },
       {
-        name: "Data-ICD License v1.0",
-        description: "Data Industry Commons for Defense License",
+        name: "Data",
+        description: "Data-ICD License v1.0",
         type: "Data",
         fileName: "Data-ICD_License_v1.0_May2025.txt",
         content: `# Data Industry Commons for Defense (Data-ICD) License
@@ -279,8 +279,8 @@ Managed by the ICD Steering Body with input from:
 *Issued under the authority of the Industry Commons for Defense Steering Body.*`
       },
       {
-        name: "Model-ICD License v1.0",
-        description: "AI/ML Model Industry Commons for Defense License",
+        name: "AI/ML Model",
+        description: "Model-ICD License v1.0",
         type: "AI/ML",
         fileName: "Model-ICD_License_v1.0_May2025.txt",
         content: `# Model Industry Commons for Defense (Model-ICD) License
@@ -387,9 +387,9 @@ Overseen by:
     borderColor: "border-blue-200",
     items: [
       {
-        name: "Capability Requirements Data Sheet",
-        description: "Standard template for documenting capability requirements",
-        type: "Software",
+        name: "Requirements",
+        description: "Capability Requirements Data Sheet (CRDS)",
+        type: "General",
         fileName: "ICD_CRDS_Template_v1.0_May2025.txt",
         content: `# ICD Capability Requirements Data Sheet (CRDS) Template
 
@@ -504,8 +504,8 @@ Overseen by:
 *Prepared under ICD Framework v1.0 guidelines*`
       },
       {
-        name: "Capability Requirements Data Sheet (Code)",
-        description: "Template for software-specific capability requirements",
+        name: "Software Requirements",
+        description: "CRDS for Software Components",
         type: "Software",
         fileName: "ICD_CRDS_Code_Template_v1.0_May2025.txt",
         content: `# ICD Capability Requirements Data Sheet - Software/Code Template
@@ -651,8 +651,8 @@ Overseen by:
 *Prepared under ICD Framework v1.0 guidelines for software development*`
       },
       {
-        name: "Hardware Requirements Data Sheet",
-        description: "Template for hardware-specific requirements documentation",
+        name: "Hardware Requirements",
+        description: "Hardware Requirements Data Sheet (HRDS)",
         type: "Hardware",
         fileName: "ICD_HRDS_Template_v1.0_May2025.txt",
         content: `# ICD Hardware Requirements Data Sheet (HRDS) Template
@@ -812,8 +812,8 @@ Overseen by:
 *Prepared under ICD Framework v1.0 guidelines for hardware development*`
       },
       {
-        name: "Hardware Requirements Data Sheet (HW)",
-        description: "Specialized template for hardware component requirements",
+        name: "Component Specs",
+        description: "Hardware Component Specifications",
         type: "Hardware",
         fileName: "ICD_HRDS_HW_Template_v1.0_May2025.txt",
         content: `# ICD Hardware Requirements Data Sheet - Hardware Component Template
@@ -972,9 +972,9 @@ Overseen by:
 *Prepared under ICD Framework v1.0 guidelines for hardware component specification*`
       },
       {
-        name: "Decision Record Template",
-        description: "Architecture Decision Record (ADR) template for technical decisions",
-        type: "Software",
+        name: "Decision Records",
+        description: "Architecture Decision Record (ADR) Template",
+        type: "General",
         fileName: "ICD_Decision_Record_Template.txt",
         content: `# ICD Architecture Decision Record (ADR) Template
 
@@ -1187,9 +1187,9 @@ Overseen by:
 *Prepared under ICD Framework v1.0 ADR guidelines*`
       },
       {
-        name: "Clawback Notification Template",
-        description: "Standard notification template for license violations",
-        type: "Software",
+        name: "Violation Notice",
+        description: "License Violation and Clawback Template",
+        type: "Legal",
         fileName: "ICD_Clawback_Notification_Template.txt",
         content: `# ICD License Violation and Clawback Notification Template
 
@@ -1397,23 +1397,23 @@ This notice is issued under the authority granted to the ICD Steering Body pursu
     borderColor: "border-purple-200",
     items: [
       {
-        name: "Steering Body Charter",
-        description: "Charter establishing the ICD Steering Body governance structure",
+        name: "Governance",
+        description: "Steering Body Charter",
         fileName: "Steering-Body-Charter.md"
       },
       {
-        name: "Certification Authority Charter",
-        description: "Framework for ICD certification and validation processes",
+        name: "Certification",
+        description: "Certification Authority Charter",
         fileName: "Certification-Authority-Charter.md"
       },
       {
-        name: "Coalition Disclosure Tiers",
-        description: "Guidelines for information sharing with coalition partners",
+        name: "Coalition Sharing",
+        description: "Coalition Disclosure Tiers",
         fileName: "Coalition-Disclosure-Tiers.md"
       },
       {
-        name: "Emergency Override Protocols",
-        description: "Procedures for emergency access and override situations",
+        name: "Emergency Access",
+        description: "Emergency Override Protocols",
         fileName: "Emergency-Override-Protocols.md"
       }
     ]
@@ -1427,18 +1427,18 @@ This notice is issued under the authority granted to the ICD Steering Body pursu
     borderColor: "border-orange-200",
     items: [
       {
-        name: "Metadata Schema",
-        description: "JSON schema for ICD component metadata",
+        name: "Metadata",
+        description: "Component Metadata Schema",
         fileName: "metadata-schema.json"
       },
       {
-        name: "Federated Audit Ledger Schema",
-        description: "Schema for distributed audit trail management",
+        name: "Audit Trails",
+        description: "Federated Audit Ledger Schema",
         fileName: "audit-ledger-schema.json"
       },
       {
-        name: "Model Testing Guidance",
-        description: "Comprehensive guidance for AI/ML model validation and testing",
+        name: "AI/ML Testing",
+        description: "Model Testing Guidance",
         fileName: "Model-Testing-Guidance.md"
       }
     ]
@@ -1452,23 +1452,23 @@ This notice is issued under the authority granted to the ICD Steering Body pursu
     borderColor: "border-teal-200",
     items: [
       {
-        name: "Field Deployment Binder",
-        description: "Complete guide for field deployment of ICD components",
+        name: "Deployment",
+        description: "Field Deployment Binder",
         fileName: "Field-Deployment-Binder.md"
       },
       {
-        name: "Partner Onboarding Kit",
-        description: "Materials and procedures for onboarding new ICD partners",
+        name: "Onboarding",
+        description: "Partner Onboarding Kit",
         fileName: "Partner-Onboarding-Kit.md"
       },
       {
-        name: "FFRDC Onboarding Contract",
-        description: "Standard contract template for FFRDC participation",
+        name: "FFRDC Contract",
+        description: "FFRDC Onboarding Template",
         fileName: "FFRDC-Onboarding-Contract.md"
       },
       {
-        name: "Red Team Activation Playbook",
-        description: "Procedures for security assessment and red team exercises",
+        name: "Red Team",
+        description: "Security Assessment Playbook",
         fileName: "Red-Team-Activation-Playbook.md"
       }
     ]
@@ -1486,11 +1486,10 @@ export default function ComponentsPage() {
         <Container size="md">
           <div className="text-center text-white">
             <Heading level="h1" className="mb-6 text-white">
-              ICD Framework Components
+              Components
             </Heading>
             <Text variant="large" className="mb-8 text-white">
-              Explore the complete collection of licenses, templates, governance documents, and technical specifications
-              that power the Industry Commons for Defense framework.
+              What we use to make collaboration work: licenses, templates, governance, and specs.
             </Text>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -1526,8 +1525,7 @@ export default function ComponentsPage() {
                 ICD Artifacts Repository
               </Heading>
               <Text className="mb-6">
-                This repository establishes a collaborative framework enabling transparent, modular, and sovereign-aligned
-                collaboration across government, FFRDCs, UARCs, and industry partners.
+                Data standards for building and sharing technology across government, labs, and industry.
               </Text>
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
