@@ -26,7 +26,7 @@ export default function DocumentsPage() {
             {/* Download the Framework */}
             <section id="download-framework" className="mb-12">
               <h2 className="text-2xl font-bold text-black mb-6">
-                Download the Framework
+                Download and get started
               </h2>
               <p className="text-neutral-700 mb-6">
                 What we use to make collaboration work: licenses, templates, governance, and specs.
@@ -140,6 +140,24 @@ export default function DocumentsPage() {
           <aside className="lg:w-64 shrink-0">
             <div className="lg:sticky lg:top-24">
               <nav className="space-y-8">
+                {/* Version Information */}
+                <div className="pb-8 border-b border-neutral-200">
+                  <div className="space-y-3 text-xs text-neutral-600">
+                    <div>
+                      <div className="font-semibold text-black">v1.0.0</div>
+                      <div>Current Version</div>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-black">May 2025</div>
+                      <div>Release Date</div>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-black">SW-ICD</div>
+                      <div>Repository License</div>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Contents */}
                 <div>
                   <h3 className="text-sm font-bold text-black mb-3">Contents</h3>
