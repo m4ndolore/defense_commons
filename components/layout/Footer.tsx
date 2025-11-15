@@ -7,7 +7,7 @@ const footerLinks = {
       { name: "For Industry", href: "/industry" },
       { name: "For Government", href: "/government" },
       { name: "Framework", href: "/framework" },
-      { name: "Components", href: "/components" },
+      { name: "Documents", href: "/documents" },
     ],
   },
   about: {

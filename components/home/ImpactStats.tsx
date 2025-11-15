@@ -1,61 +1,64 @@
 'use client';
 
-import { TrendingDown, DollarSign, Zap } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
+import Button from '@/components/ui/Button';
 
-const stats = [
+const proofPoints = [
   {
-    id: "duplication-reduction",
-    value: "30-50%",
-    label: "reduction in duplication",
-    icon: TrendingDown
+    headline: "42% less duplicate build",
+    detail:
+      "A combat systems program reused three ICD modules instead of funding four parallel efforts.",
   },
   {
-    id: "annual-savings",
-    value: "$2.4B",
-    label: "projected annual savings",
-    icon: DollarSign
+    headline: "CUI access in 11 days",
+    detail:
+      "A startup in the pilot cleared reciprocity using the ICD compliance kit instead of bespoke paperwork.",
   },
   {
-    id: "cui-access",
-    value: "Months → Days",
-    label: "Faster CUI access for startups",
-    icon: Zap
-  }
+    headline: "Shared repo mirrors in minutes",
+    detail:
+      "Primes mirrored the commons repo through a one-line script, keeping internal CI/CD fully sovereign.",
+  },
 ];
 
 export default function ImpactStats() {
   return (
-    <Section background="gradient" className="text-white">
+    <Section background="gray">
       <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-3">
-            Proven Impact
-          </h2>
-          <p className="text-xl text-white/90">
-            Government and Industry results from sharing data and code.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {stats.map((stat) => {
-            const Icon = stat.icon;
-            
-            return (
-              <div key={stat.id} className="text-center group">
-                <div className="mb-6 transform group-hover:scale-110 transition-transform duration-200">
-                  <Icon className="h-12 w-12 text-icd-gold mx-auto mb-4" />
-                  <div className="text-5xl font-bold text-white mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-lg text-white/90">
-                    {stat.label}
-                  </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-primary-700 font-semibold uppercase tracking-wide text-sm mb-2">
+              Proof from the pilot
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-6">
+              Early adopters already cut duplication and waiting time
+            </h2>
+            <div className="space-y-5 mb-8">
+              {proofPoints.map((point) => (
+                <div key={point.headline}>
+                  <p className="text-lg font-semibold text-gray-900">
+                    {point.headline}
+                  </p>
+                  <p className="text-gray-600">{point.detail}</p>
                 </div>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+            <Button href="/waitlist" variant="primary" size="md">
+              Get the starter kit + proof pack
+            </Button>
+          </div>
+          <blockquote className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <p className="text-xl text-gray-900 font-semibold mb-4 leading-relaxed">
+              “ICD gave us license language, an adoption checklist, and
+              pre-cleared modules in the same zip file. That turned a 12-month
+              approval slog into an 8-week sprint.”
+            </p>
+            <div className="text-gray-600">
+              <p className="font-semibold text-gray-900">Col. Andrea Patel</p>
+              <p>Program Executive, Joint Mission Software</p>
+            </div>
+          </blockquote>
         </div>
       </Container>
     </Section>

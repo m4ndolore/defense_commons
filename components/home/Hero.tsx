@@ -23,35 +23,59 @@ export default function Hero() {
         <div className="w-full h-full bg-gradient-to-tr from-icd-green to-transparent rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className={`text-center transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6 tracking-tight text-white">
-            Defense Commons
-          </h1>
-          
-          <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto font-light leading-relaxed text-white/95">
-            Committed to government and industry collaboration. Building together while protecting trust, IP, and speed.
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div
+          className={`text-center transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <p className="text-icd-gold font-semibold uppercase tracking-[0.2em] text-xs mb-4">
+            Industry Commons for Defense
           </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6 tracking-tight text-white">
+            Ship defense software without surrendering your IP.
+          </h1>
+
+          <p className="text-lg sm:text-xl mb-10 max-w-3xl mx-auto font-light leading-relaxed text-white/95">
+            ICD is the neutral license, shared repo, and compliance kit that let
+            government and industry reuse code on day one. One agreement. One
+            workflow. No more 12-month CUI delays.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
             <Button
               href="/waitlist"
               variant="secondary"
               size="lg"
               className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200 hero-accent-glow"
             >
-              Join the Waitlist
+              Get the ICD Starter Kit
             </Button>
             <Button
-              href="/contribute"
+              href="https://github.com/industry-commons-for-defense/icd-licenses/blob/main/SW-ICD-License-v1.0.txt"
               variant="secondary"
               size="lg"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200 btn-secondary-on-dark"
+              target="_blank"
+              rel="noreferrer"
             >
-              Contribute Code
+              Read the ICD license
             </Button>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-4 text-left text-white/80 text-sm">
+            {[
+              "Protect proprietary modules with sovereign-sharing terms.",
+              "Mirror the commons repo into your own pipelines immediately.",
+              "Carry a pre-approved compliance packet into every program.",
+            ].map((item) => (
+              <div
+                key={item}
+                className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </div>
