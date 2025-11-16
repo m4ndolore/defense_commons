@@ -6,12 +6,12 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navigation = [
-  { name: "Industry", href: "/industry" },
-  { name: "Government", href: "/government" },
+  { name: "Home", href: "/" },
   { name: "Framework", href: "/framework" },
   { name: "Documents", href: "/documents" },
+  { name: "Commons", href: "/commons" },
+  { name: "Community", href: "/community" },
   { name: "About", href: "/about" },
-  { name: "Glossary", href: "/glossary" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -80,16 +80,16 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Join Button */}
+          {/* Waitlist Button */}
           <div className="hidden md:flex items-center">
             <Link
-              href="/join"
+              href="/waitlist"
               style={{ backgroundColor: '#2e1065', color: '#ffffff' }}
               className="px-10 py-4 rounded-md hover:bg-primary-900 transition-colors duration-200 font-bold text-xl"
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a1d8f'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2e1065'}
             >
-              Join the ICD Steering Body
+              Request Starter Kit
             </Link>
           </div>
 
@@ -122,12 +122,12 @@ export default function Header() {
             </div>
             <div className="px-4 pt-4 mt-4 border-t">
               <Link
-                href="/join"
+                href="/waitlist"
                 style={{ backgroundColor: '#2e1065', color: '#ffffff' }}
                 className="block text-center px-6 py-4 rounded-md hover:bg-primary-900 transition-colors duration-200 font-bold text-xl mb-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Join the ICD Steering Body
+                Request Starter Kit
               </Link>
               <div className="flex space-x-4 justify-center">
                 {socialLinks.map((item) => (

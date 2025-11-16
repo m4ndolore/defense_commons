@@ -1,30 +1,32 @@
 import Link from "next/link";
 
 const footerLinks = {
-  perspectives: {
-    title: "By Role",
+  navigation: {
+    title: "Navigate",
     links: [
-      { name: "For Industry", href: "/industry" },
-      { name: "For Government", href: "/government" },
+      { name: "Home", href: "/" },
       { name: "Framework", href: "/framework" },
       { name: "Documents", href: "/documents" },
+      { name: "Commons", href: "/commons" },
+      { name: "Community", href: "/community" },
     ],
   },
-  about: {
-    title: "About ICD",
+  resources: {
+    title: "Resources",
     links: [
-      { name: "Mission", href: "/about#mission" },
-      { name: "Governance", href: "/about#governance" },
-      { name: "501(c)(6) Status", href: "/about#status" },
+      { name: "Request Starter Kit", href: "/waitlist" },
+      { name: "SW-ICD License", href: "https://github.com/industry-commons-for-defense/icd-licenses/blob/main/SW-ICD-License-v1.0.txt", external: true },
+      { name: "GitHub Repo", href: "https://github.com/industry-commons-for-defense", external: true },
+      { name: "Templates & Agreements", href: "/documents#templates" },
+    ],
+  },
+  organization: {
+    title: "Organization",
+    links: [
+      { name: "About ICD", href: "/about" },
+      { name: "Community Governance", href: "/community#steering-body" },
       { name: "Brand Guidelines", href: "/brand" },
-    ],
-  },
-  getInvolved: {
-    title: "Get Started",
-    links: [
-      { name: "Join ICD", href: "/contact" },
-      { name: "Pilot Programs", href: "/contact#contact-form" },
-      { name: "Contact Us", href: "/contact" },
+      { name: "Contact", href: "/contact" },
     ],
   },
 };
@@ -55,10 +57,10 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
-              {footerLinks.perspectives.title}
+              {footerLinks.navigation.title}
             </h3>
             <ul className="space-y-2 text-sm">
-              {footerLinks.perspectives.links.map((link) => (
+              {footerLinks.navigation.links.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -74,18 +76,30 @@ export default function Footer() {
 
           <div>
             <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
-              {footerLinks.about.title}
+              {footerLinks.resources.title}
             </h3>
             <ul className="space-y-2 text-sm">
-              {footerLinks.about.links.map((link) => (
+              {footerLinks.resources.links.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="hover:opacity-80 transition-opacity duration-200"
-                    style={{ color: '#ffffff' }}
-                  >
-                    {link.name}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-80 transition-opacity duration-200"
+                      style={{ color: '#ffffff' }}
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="hover:opacity-80 transition-opacity duration-200"
+                      style={{ color: '#ffffff' }}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -93,10 +107,10 @@ export default function Footer() {
 
           <div>
             <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
-              {footerLinks.getInvolved.title}
+              {footerLinks.organization.title}
             </h3>
             <ul className="space-y-2 text-sm">
-              {footerLinks.getInvolved.links.map((link) => (
+              {footerLinks.organization.links.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

@@ -17,14 +17,14 @@ export default function DocumentsPage() {
           <main className="flex-1 max-w-3xl">
             {/* Title and Attribution */}
             <h1 className="text-4xl font-bold text-black mb-2">
-              Defense Commons License
+              Defense Commons Framework
             </h1>
             <p className="text-lg text-neutral-600 mb-12">
               By Paul Garcia
             </p>
 
-            {/* Download the License */}
-            <section id="download-license" className="mb-12">
+            {/* Download the Framework */}
+            <section id="download-framework" className="mb-12">
               <h2 className="text-2xl font-bold text-black mb-6">
                 Download and get started
               </h2>
@@ -97,35 +97,10 @@ export default function DocumentsPage() {
                 <p>
                   The updated ICD Framework reflects this shift. It introduces a dual-license model designed specifically for defense: one license for open, reusable components and another for controlled, sensitive technology. Together, these licenses form a unified approach that gives contributors confidence in how their work will be used and gives government the transparency it needs to adopt, extend, and govern shared mission software.
                 </p>
-
-                <p>
-                  The ICD Framework has two essential goals that are critically important for modern defense software:
-                </p>
-
-                <ol className="list-decimal ml-6 space-y-2">
-                  <li>
-                    <strong>High-resolution collaboration.</strong> Teams can contribute or consume components as soon as both sides are ready, without waiting for lengthy legal negotiation or bespoke agreements. This makes it easier for programs, labs, and companies to work together, iterate, and ship faster.
-                  </li>
-                  <li>
-                    <strong>A simple, one-document structure.</strong> Each license is designed to minimize legal friction and reduce time spent negotiating terms. Instead of dozens of variants, ICD maintains a single core form for each licensing class. Contributors typically decide only one key variable: whether a component is intended for open reuse or controlled release.
-                  </li>
-                </ol>
-
-                <p>
-                  Whether you are using ICD for the first time or are already familiar with modern open collaboration models, we recommend reviewing the ICD User Guide. It explains the structure of the licenses, how components move across tiers, examples of SBOM/HBOM provenance tracking, and best practices for working across government and industry.
-                </p>
-
-                <p>
-                  While ICD will not cover every possible edge case, its terms are intended to be balanced — supporting both the contributors building technology and the government teams depending on it. There is always a trade-off between simplicity and comprehensive coverage, and ICD is intentionally optimized for clarity, speed, and trust. Users are encouraged to consult legal counsel where necessary, but the framework provides a common, stable starting point for most defense collaboration scenarios.
-                </p>
-
-                <p>
-                  We built ICD based on real operational lessons from industry, government, and the open-source community. It is shaped by feedback from engineers, acquisition professionals, lawyers, and program leaders who understand the practical challenges of modern defense technology. As the ecosystem evolves, ICD will continue to incorporate community input and remain a living standard that supports the mission.
-                </p>
               </div>
             </section>
 
-            {/* Legal Disclaimer */}
+            {/* Disclaimer */}
             <section id="disclaimer" className="border-t border-neutral-200 pt-8">
               <h2 className="text-xl font-bold text-black mb-4">
                 Legal Disclaimer

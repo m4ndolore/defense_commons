@@ -1,110 +1,45 @@
 'use client';
 
-import Section from '@/components/ui/Section';
-import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
-
 const steps = [
   {
-    number: "1",
-    title: "Request the ICD Starter Kit",
-    description:
-      "Download the license summary, contract clauses, repo mirroring script, and compliance packet. Share it with legal, engineering, and security at the same time.",
+    title: "Request the starter kit",
+    detail:
+      "One email gives legal, engineering, and security the same documents, templates, and repo instructions.",
   },
   {
-    number: "2",
-    title: "Nominate Your First Module",
-    description:
-      "Pick one component to share or reuse. We walkthrough tagging, access levels, and how to mirror the commons repo back into your CI/CD within minutes.",
-  },
-];
-
-const milestones = [
-  {
-    title: "Starter Kit Distribution",
-    date: "Now",
-    detail: "Legal + technical packet delivered as soon as you join the waitlist.",
+    title: "Mirror the commons",
+    detail:
+      "Run the script in your environment, tag your first module with ICD metadata, and keep everything sovereign.",
   },
   {
-    title: "Commons Repo Launch",
-    date: "Q2 2025",
-    detail: "Founding members mirror the reference repo into their environments.",
-  },
-  {
-    title: "Mission Module Exchange",
-    date: "Q3 2025",
-    detail: "First reusable mission applications cleared for operational use.",
+    title: "Cite ICD in your next contract",
+    detail:
+      "Reference the license, attach the compliance packet, and invite partners to reuse the same repo.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <Section>
-      <Container>
-        <div className="text-center mb-12">
-          <p className="text-primary-700 font-semibold uppercase tracking-wide text-sm mb-2">
-            Adoption steps
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-3">
-            Two actions to get ICD running inside your program
-          </h2>
-          <p className="text-xl text-gray-600">
-            We intentionally removed everything else. Do these two steps and
-            you&apos;re in.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {steps.map((step) => (
-            <div key={step.number} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary-800 text-white font-bold text-xl mb-4">
-                {step.number}
+    <section className="bg-white border-b border-neutral-200">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <h2 className="text-3xl font-display font-bold text-black mb-4">
+          How it works
+        </h2>
+        <p className="text-neutral-700 mb-6">
+          Three moves. No demos, no pilots, no procurement cycles.
+        </p>
+        <ol className="space-y-6 text-neutral-800">
+          {steps.map((step, index) => (
+            <li key={step.title} className="flex gap-4">
+              <span className="text-primary-900 font-semibold">{index + 1}.</span>
+              <div>
+                <p className="text-lg font-semibold text-black">{step.title}</p>
+                <p className="text-neutral-700">{step.detail}</p>
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                {step.title}
-              </h3>
-              <p className="text-gray-600">{step.description}</p>
-            </div>
+            </li>
           ))}
-        </div>
-
-        <div className="bg-primary-950 text-white rounded-3xl p-8 md:p-10 shadow-lg">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <p className="text-icd-gold font-semibold uppercase tracking-wide text-xs mb-2">
-                Roadmap
-              </p>
-              <h3 className="text-2xl font-display font-semibold mb-4">
-                Here&apos;s when each milestone lands
-              </h3>
-              <p className="text-white/80">
-                Set expectations with leadership using this simple timeline.
-              </p>
-            </div>
-            <Button
-              href="/waitlist"
-              variant="secondary"
-              size="md"
-              className="bg-icd-gold text-primary-950 hover:bg-yellow-400"
-            >
-              Get timeline updates
-            </Button>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
-            {milestones.map((milestone) => (
-              <div key={milestone.title} className="bg-white/5 rounded-2xl p-4 border border-white/5">
-                <p className="text-icd-gold font-semibold text-sm mb-1">
-                  {milestone.date}
-                </p>
-                <p className="text-lg font-semibold text-white mb-2">
-                  {milestone.title}
-                </p>
-                <p className="text-white/80 text-sm">{milestone.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Container>
-    </Section>
+        </ol>
+      </div>
+    </section>
   );
 }
