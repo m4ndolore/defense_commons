@@ -1,5 +1,5 @@
 import Hero from "@/components/home/Hero";
-import WhyDefenseCommons from "@/components/home/WhyDefenseCommons";
+import DayOneValue from "@/components/home/DayOneValue";
 import RoleSpecificHooks from "@/components/home/RoleSpecificHooks";
 import ImpactStats from "@/components/home/ImpactStats";
 import HowItWorks from "@/components/home/HowItWorks";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhyDefenseCommons />
+      <DayOneValue />
       <RoleSpecificHooks />
       <ImpactStats />
       <HowItWorks />
