@@ -27,7 +27,7 @@ export default function Hero() {
             href="/waitlist"
             variant="primary"
             size="lg"
-            className="bg-primary-900 text-white hover:bg-primary-800 shadow-lg shadow-primary-900/20"
+            className="bg-primary-900 text-white hover:bg-primary-800 shadow-[0_15px_35px_rgba(65,0,130,0.35)] rounded-2xl px-8 py-3"
           >
             Join the waitlist
           </Button>
@@ -35,7 +35,7 @@ export default function Hero() {
             href="/documents"
             variant="primary"
             size="lg"
-            className="bg-primary-900 text-white hover:bg-primary-800 shadow-lg shadow-primary-900/20"
+            className="bg-primary-900 text-white hover:bg-primary-800 hover:text-white shadow-[0_15px_35px_rgba(65,0,130,0.35)] rounded-2xl px-8 py-3"
           >
             Start Building
           </Button>

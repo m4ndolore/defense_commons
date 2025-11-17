@@ -16,6 +16,9 @@ export default function DocumentsPage() {
           {/* Main Content - Left Side */}
           <main className="flex-1 max-w-3xl">
             {/* Title and Attribution */}
+            <p className="text-xs uppercase tracking-[0.4em] text-primary-800 mb-6">
+              Industry Commons for Defense
+            </p>
             <h1 className="text-4xl font-bold text-black mb-2">
               Defense Commons License
             </h1>

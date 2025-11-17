@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Framework", href: "/framework" },
   { name: "Documents", href: "/documents" },
+  { name: "Framework", href: "/framework" },
   { name: "Commons", href: "/commons" },
   { name: "Community", href: "/community" },
   { name: "About", href: "/about" },
@@ -84,7 +84,7 @@ export default function Header() {
           <div className="hidden md:flex items-center">
             <Link
               href="/waitlist"
-              className="px-8 py-3 rounded-md bg-primary-900 text-white hover:bg-primary-800 transition-colors duration-200 font-semibold text-lg"
+              className="px-7 py-3 rounded-full bg-primary-900 text-white hover:bg-primary-800 transition-colors duration-200 font-semibold text-lg shadow-[0_12px_30px_rgba(65,0,130,0.3)]"
             >
               Join now
             </Link>
@@ -120,7 +120,7 @@ export default function Header() {
             <div className="px-4 pt-4 mt-4 border-t">
               <Link
                 href="/waitlist"
-                className="block text-center px-6 py-4 rounded-md bg-primary-900 text-white hover:bg-primary-800 transition-colors duration-200 font-semibold text-lg mb-4"
+                className="block text-center px-6 py-4 rounded-full bg-primary-900 text-white hover:bg-primary-800 transition-colors duration-200 font-semibold text-lg mb-4 shadow-[0_12px_30px_rgba(65,0,130,0.3)]"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Join now
