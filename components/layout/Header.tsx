@@ -84,12 +84,9 @@ export default function Header() {
           <div className="hidden md:flex items-center">
             <Link
               href="/waitlist"
-              style={{ backgroundColor: '#2e1065', color: '#ffffff' }}
-              className="px-10 py-4 rounded-md hover:bg-primary-900 transition-colors duration-200 font-bold text-xl"
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a1d8f'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2e1065'}
+              className="px-8 py-3 rounded-md bg-primary-900 text-white hover:bg-primary-800 transition-colors duration-200 font-semibold text-lg"
             >
-              Request Starter Kit
+              Join now
             </Link>
           </div>
 
@@ -123,11 +120,10 @@ export default function Header() {
             <div className="px-4 pt-4 mt-4 border-t">
               <Link
                 href="/waitlist"
-                style={{ backgroundColor: '#2e1065', color: '#ffffff' }}
-                className="block text-center px-6 py-4 rounded-md hover:bg-primary-900 transition-colors duration-200 font-bold text-xl mb-4"
+                className="block text-center px-6 py-4 rounded-md bg-primary-900 text-white hover:bg-primary-800 transition-colors duration-200 font-semibold text-lg mb-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Request Starter Kit
+                Join now
               </Link>
               <div className="flex space-x-4 justify-center">
                 {socialLinks.map((item) => (

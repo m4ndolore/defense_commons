@@ -3,9 +3,9 @@
 import Button from "@/components/ui/Button";
 
 const promises = [
-  "Neutral license that keeps proprietary work proprietary.",
-  "Shared repo plus starter modules you can mirror in minutes.",
-  "Compliance packet and templates that travel with every deal.",
+  "Build Together. Best practices for government and industry collaboration.",
+  "Deliver Faster. Shared access to data and tools.",
+  "Protect What Matters. Industry leading security practices replacing compliance checklists",
 ];
 
 export default function Hero() {
@@ -19,27 +19,25 @@ export default function Hero() {
           Unlock Public Technology.
         </h1>
         <p className="text-xl text-primary-900 max-w-3xl mb-10 leading-relaxed">
-          ICD is the standards framework for building with government. Download the documents,
-          mirror the commons repo, and cite ICD in your next contract. No pitch decks—just the
-          rules, code, and compliance kit.
+          A Better Way to Work With Government.
         </p>
 
         <div className="flex flex-wrap gap-4 mb-12">
           <Button
             href="/waitlist"
-            variant="secondary"
+            variant="primary"
             size="lg"
-            className="bg-icd-gold text-primary-950 hover:bg-yellow-400 shadow-xl font-semibold transition-all duration-200"
+            className="bg-primary-900 text-white hover:bg-primary-800"
           >
-            Member&apos;s Waitlist
+            Join the waitlist
           </Button>
           <Button
             href="/components"
             variant="secondary"
             size="lg"
-            className="bg-transparent border-2 border-white hover:bg-white hover:text-primary-950 shadow-xl font-semibold transition-all duration-200"
+            className="border border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-white"
           >
-            Contribute Code
+            Contribute code
           </Button>
         </div>
 
