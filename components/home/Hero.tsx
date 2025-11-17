@@ -27,17 +27,17 @@ export default function Hero() {
             href="/waitlist"
             variant="primary"
             size="lg"
-            className="bg-primary-900 text-white hover:bg-primary-800"
+            className="bg-primary-900 text-white hover:bg-primary-800 shadow-lg shadow-primary-900/20"
           >
             Join the waitlist
           </Button>
           <Button
-            href="/components"
-            variant="secondary"
+            href="/documents"
+            variant="primary"
             size="lg"
-            className="border border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-white"
+            className="bg-primary-900 text-white hover:bg-primary-800 shadow-lg shadow-primary-900/20"
           >
-            Contribute code
+            Start Building
           </Button>
         </div>
 

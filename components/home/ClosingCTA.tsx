@@ -17,20 +17,20 @@ export default function ClosingCTA() {
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button
+            href="/waitlist"
+            variant="primary"
+            size="lg"
+            className="bg-primary-900 text-white hover:bg-primary-800 shadow-lg shadow-primary-900/20"
+          >
+            Join the waitlist
+          </Button>
+          <Button
             href="/documents"
             variant="primary"
             size="lg"
-            className="bg-primary-900 text-white hover:bg-primary-800"
+            className="bg-primary-900 text-white hover:bg-primary-800 shadow-lg shadow-primary-900/20"
           >
-            View documents
-          </Button>
-          <Button
-            href="/waitlist"
-            variant="secondary"
-            size="lg"
-            className="border border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-white"
-          >
-            Join the waitlist
+            Start Building
           </Button>
         </div>
       </Container>

@@ -38,12 +38,12 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <div key={step.number} className="text-center group">
               <div className="relative mb-6">
-                <div className="w-16 h-16 mx-auto bg-white text-primary-900 border border-primary-200 rounded-full flex items-center justify-center text-2xl font-bold">
+                <div className="hidden w-16 h-16 mx-auto bg-primary-800 text-white rounded-full flex items-center justify-center text-2xl font-bold group-hover:bg-primary-700 transition-white">
                   <span>{step.number}</span>
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-primary-300">
-                    <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-0 h-0 border-l-8 border-l-primary-300 border-y-4 border-y-transparent"></div>
+                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-primary-200">
+                    <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-0 h-0 border-l-8 border-l-primary-200 border-y-4 border-y-transparent"></div>
                   </div>
                 )}
               </div>
