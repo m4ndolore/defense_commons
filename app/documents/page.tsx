@@ -17,14 +17,14 @@ export default function DocumentsPage() {
           <main className="flex-1 max-w-3xl">
             {/* Title and Attribution */}
             <h1 className="text-4xl font-bold text-black mb-2">
-              Defense Commons Framework
+              Defense Commons License
             </h1>
             <p className="text-lg text-neutral-600 mb-12">
               By Paul Garcia
             </p>
 
-            {/* Download the Framework */}
-            <section id="download-framework" className="mb-12">
+            {/* Download the License */}
+            <section id="download-license" className="mb-12">
               <h2 className="text-2xl font-bold text-black mb-6">
                 Download and get started
               </h2>

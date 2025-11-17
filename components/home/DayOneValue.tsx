@@ -29,22 +29,25 @@ const toolkit = [
 export default function DayOneValue() {
   return (
     <section className="bg-white border-b border-neutral-200">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <h2 className="text-3xl font-display font-bold text-black mb-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <p className="text-sm uppercase tracking-[0.4em] text-amber-900/80 mb-3">
+          Documents + Repo
+        </p>
+        <h2 className="text-3xl font-display font-bold text-amber-950 mb-4">
           What you get on day one
         </h2>
-        <p className="text-neutral-700 mb-6">
+        <p className="text-amber-900/80 mb-8">
           Everything lives in one starter kit so legal, engineering, and security review
           the same packet. No pitch decks—just documents and repo access.
         </p>
         <div className="space-y-6 mb-10">
           {toolkit.map((item) => (
             <div key={item.title}>
-              <p className="text-lg font-semibold text-black mb-2">{item.title}</p>
-              <ul className="space-y-2 text-neutral-700">
+              <p className="text-lg font-semibold text-amber-950 mb-2">{item.title}</p>
+              <ul className="space-y-2 text-amber-900/80">
                 {item.details.map((detail) => (
                   <li key={detail} className="flex gap-3">
-                    <span className="text-icd-green font-bold">•</span>
+                    <span className="text-amber-700 font-bold">•</span>
                     <span>{detail}</span>
                   </li>
                 ))}

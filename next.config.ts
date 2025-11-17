@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  turbopack: {
+    // Helps worktrees use their own dependency roots
+    root: __dirname,
+  },
 };
 
 export default nextConfig;
