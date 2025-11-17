@@ -37,14 +37,12 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {steps.map((step, index) => (
             <div key={step.number} className="text-center group">
-              <div className="relative mb-6">
-                <div className="hidden w-16 h-16 mx-auto bg-primary-800 text-white rounded-full flex items-center justify-center text-2xl font-bold group-hover:bg-primary-700 transition-white">
-                  <span>{step.number}</span>
-                </div>
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-primary-200">
-                    <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-0 h-0 border-l-8 border-l-primary-200 border-y-4 border-y-transparent"></div>
-                  </div>
+              <div className="relative mb-10 min-h-[0.5rem]">
+                {index === 0 && (
+                  <div className="hidden md:block absolute top-2 left-2/5 w-[110%] h-0.5 bg-black"></div>
+                )}
+                {index === 1 && (
+                  <div className="hidden md:block absolute top-2 left-3/5 w-[110%] h-0.5 bg-black"></div>
                 )}
               </div>
               

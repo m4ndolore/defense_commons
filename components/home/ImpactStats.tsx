@@ -27,13 +27,13 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <Section background="gradient" className="text-white">
+    <Section background="gray" className="text-black">
       <Container>
         <div className="text-left mb-12">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-3">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-black mb-3">
             Proven Impact
           </h2>
-          <p className="text-xl text-white/90">
+          <p className="text-xl text-black/90">
             Government and Industry results from sharing data and code.
           </p>
         </div>
@@ -45,11 +45,13 @@ export default function ImpactStats() {
             return (
               <div key={stat.id} className="text-center group">
                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-200">
-                  <Icon className="h-12 w-12 text-icd-gold mx-auto mb-4" />
-                  <div className="text-5xl font-bold text-white mb-2">
+                  <div className="mx-auto mb-4 inline-flex items-center justify-center rounded-full bg-black text-white w-14 h-14 shadow-[0_12px_20px_rgba(0,0,0,0.25)]">
+                    <Icon className="h-7 w-7" />
+                  </div>
+                  <div className="text-5xl font-bold text-black mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-lg text-white/90">
+                  <div className="text-lg text-black/90">
                     {stat.label}
                   </div>
                 </div>
