@@ -41,22 +41,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-950 relative overflow-hidden" style={{ backgroundColor: '#2e1065', color: '#ffffff' }}>
-      {/* Subtle accent border at top */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-icd-gold via-icd-green to-icd-blue"></div>
-
-      {/* Geometric accent elements */}
-      <div className="absolute top-0 right-0 w-32 h-32 opacity-5">
-        <div className="w-full h-full bg-gradient-to-br from-icd-blue to-transparent rounded-full blur-2xl"></div>
-      </div>
-      <div className="absolute bottom-0 left-0 w-24 h-24 opacity-5">
-        <div className="w-full h-full bg-gradient-to-tr from-icd-gold to-transparent rounded-full blur-2xl"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-[#f3edff] text-primary-950 border-t border-neutral-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
+            <h3 className="font-display font-semibold mb-4 text-primary-950">
               {footerLinks.navigation.title}
             </h3>
             <ul className="space-y-2 text-sm">
@@ -64,8 +53,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="hover:opacity-80 transition-opacity duration-200"
-                    style={{ color: '#ffffff' }}
+                    className="text-primary-900 hover:text-primary-700 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -75,7 +63,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
+            <h3 className="font-display font-semibold mb-4 text-primary-950">
               {footerLinks.resources.title}
             </h3>
             <ul className="space-y-2 text-sm">
@@ -86,16 +74,14 @@ export default function Footer() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:opacity-80 transition-opacity duration-200"
-                      style={{ color: '#ffffff' }}
+                      className="text-primary-900 hover:text-primary-700 transition-colors duration-200"
                     >
                       {link.name}
                     </a>
                   ) : (
                     <Link
                       href={link.href}
-                      className="hover:opacity-80 transition-opacity duration-200"
-                      style={{ color: '#ffffff' }}
+                      className="text-primary-900 hover:text-primary-700 transition-colors duration-200"
                     >
                       {link.name}
                     </Link>
@@ -106,7 +92,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
+            <h3 className="font-display font-semibold mb-4 text-primary-950">
               {footerLinks.organization.title}
             </h3>
             <ul className="space-y-2 text-sm">
@@ -114,8 +100,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="hover:opacity-80 transition-opacity duration-200"
-                    style={{ color: '#ffffff' }}
+                    className="text-primary-900 hover:text-primary-700 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -125,7 +110,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display font-semibold mb-4" style={{ color: '#ffffff' }}>
+            <h3 className="font-display font-semibold mb-4 text-primary-950">
               Connect
             </h3>
             <div className="flex space-x-4 mb-4">
@@ -135,20 +120,18 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-80 transition-opacity duration-200"
-                  style={{ color: '#ffffff' }}
+                  className="text-primary-900 hover:text-primary-700 transition-colors duration-200"
                 >
                   {link.name}
                 </a>
               ))}
             </div>
-            <p className="text-sm" style={{ color: '#ffffff' }}>
+            <p className="text-sm text-primary-900">
               Contact:
               <br />
               <a
                 href="mailto:contact@icd-defense.org"
-                className="hover:opacity-80 transition-opacity duration-200"
-                style={{ color: '#ffffff' }}
+                className="text-primary-900 hover:text-primary-700 transition-colors duration-200"
               >
                 contact@icd-defense.org
               </a>
@@ -156,15 +139,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/30 mt-8 pt-8 text-center text-sm" style={{ color: '#ffffff' }}>
-          <p style={{ color: '#ffffff' }}>
+        <div className="border-t border-primary-200 mt-8 pt-8 text-center text-sm text-primary-900">
+          <p>
             © {currentYear} The ICD Foundation. All rights reserved. Licensed
             under <a
               href="https://github.com/industry-commons-for-defense/icd-licenses/blob/main/SW-ICD-License-v1.0.txt"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:opacity-80 transition-opacity duration-200"
-              style={{ color: '#ffffff' }}
+              className="underline text-primary-900 hover:text-primary-700 transition-colors duration-200"
             >
               SW-ICD License v1.0
             </a>

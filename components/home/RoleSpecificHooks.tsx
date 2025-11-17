@@ -1,65 +1,6 @@
-// 'use client';
-
-// const commitments = [
-//   {
-//     title: "Industry",
-//     summary:
-//       "Ship real software, keep your IP, and reuse government-cleared components without bespoke NDAs.",
-//     link: { label: "Industry overview", href: "/industry" },
-//   },
-//   {
-//     title: "Government",
-//     summary:
-//       "Reference ICD in solicitations, mirror the commons repo, and align with SHARE-IT mandates.",
-//     link: { label: "Government overview", href: "/government" },
-//   },
-//   {
-//     title: "Steering Body",
-//     summary:
-//       "Fifteen organizations maintain the framework, approve changes, and publish new standards.",
-//     link: { label: "Community governance", href: "/community#steering-body" },
-//   },
-// ];
-
-// export default function RoleSpecificHooks() {
-//   return (
-//     <section className="bg-[#f3edff] border-b border-neutral-200">
-//       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-//         <p className="text-sm uppercase tracking-[0.4em] text-primary-800 mb-3">
-//           Community
-//         </p>
-//         <h2 className="text-3xl font-display font-bold text-primary-950 mb-4">
-//           One framework, shared across every role
-//         </h2>
-//         <p className="text-primary-900 mb-6">
-//           No persona pages or marketing funnels. Each role uses the exact same documents,
-//           repo, and starter kit.
-//         </p>
-//         <div className="space-y-6">
-//           {commitments.map((commitment) => (
-//             <div key={commitment.title}>
-//               <p className="text-lg font-semibold text-primary-950">{commitment.title}</p>
-//               <p className="text-primary-900 mb-1">{commitment.summary}</p>
-//               <a
-//                 href={commitment.link.href}
-//                 className="text-primary-700 font-semibold text-sm hover:underline"
-//               >
-//                 {commitment.link.label}
-//               </a>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import Section from '@/components/ui/Section';
-import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 
 const roles = [
@@ -119,10 +60,10 @@ const roles = [
 
 export default function RoleSpecificHooks() {
   return (
-    <Section background="gray">
-      <Container>
+    <section className="bg-[#f3edff] border-b border-neutral-200">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-left mb-12">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-primary-950">
             How does this help you?
           </h2>
         </div>
@@ -170,7 +111,7 @@ export default function RoleSpecificHooks() {
             </div>
           ))}
         </div>
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 }
