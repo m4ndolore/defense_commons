@@ -1,4 +1,10 @@
 import Link from "next/link";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 
 const versionInfo = [
   { label: "Version", value: "v1.0.0" },
@@ -20,7 +26,30 @@ const contents = [
 const elsewhere = [
   { label: "Documents", href: "/documents" },
   { label: "Commons Repo", href: "/commons" },
-  { label: "Governance", href: "/community#governance" },
+  { label: "Community", href: "/community" },
+];
+
+const procurementList = [
+  "SHARE-IT Act",
+  "MOSA",
+  "DevSecOps / Platform One",
+  "Software Acquisition Pathway",
+  "OTA, rapid prototyping, and MTA pathways",
+];
+
+const adoptionSteps = [
+  {
+    title: "Request the Starter Kit",
+    detail: "All documents, licenses, templates, and repo instructions.",
+  },
+  {
+    title: "Mirror the Commons Repo",
+    detail: "Bring ICD into your own environment, classified or unclassified.",
+  },
+  {
+    title: "Cite ICD in Your Next Contract",
+    detail: "Use the license, include the compliance packet, adopt the repo structure.",
+  },
 ];
 
 export default function FrameworkPage() {
@@ -29,40 +58,41 @@ export default function FrameworkPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col lg:flex-row gap-12">
           <main className="flex-1 max-w-3xl">
-            <header className="space-y-6 mb-10" id="top">
+            <header className="mb-10">
               <p className="text-xs uppercase tracking-[0.4em] text-primary-800 mb-4">
-                Industry Commons for Defense
+                Framework
               </p>
               <h1 className="text-4xl font-bold text-black mb-4">
                 The ICD Framework
               </h1>
-              <p className="text-2xl font-bold">
-                Open, transparent, and neutral. 
-              </p>
               <p className="text-lg text-neutral-700">
-                The ICD Framework extends the community backed excellence of open-source development for national security technology. ICD gives government and industry a better way to build, share, and protect mission software without renegotiating IP, reinventing structure, or rebuilding tools from scratch.
-              </p>
-              <p className="text-lg text-neutral-700">
-                This free toolkit provides simple, proven templates and guidance that protect your intellectual property, enable technical reuse, and let you get back to building.
+                A simple, neutral set of standards that help government and industry build, share, and protect defense software. No sales funnel. No proprietary lock-in. Just a clear way to collaborate.
               </p>
             </header>
 
+            <section id="principles" className="space-y-3 mb-12">
+              <h2 className="text-2xl font-bold">First Principles</h2>
+              <ul className="space-y-2 text-neutral-700">
+                <li><strong>Build Together:</strong> a shared innovation base eliminates duplication and accelerates delivery.</li>
+                <li><strong>Share Access:</strong> common standards and repo structures allow reuse across programs, services, and vendors.</li>
+                <li><strong>Protect Critical Assets:</strong> dual licensing preserves commercial rights while giving government the transparency it needs.</li>
+              </ul>
+            </section>
+
             <section id="whats-inside" className="space-y-6 mb-12">
-              <h2 className="text-2xl font-bold">What’s Inside</h2>
-              <p className="text-neutral-700">ICD consists of three components that work as a single system:</p>
+              <h2 className="text-2xl font-bold">What&apos;s Inside the Framework</h2>
+              <p className="text-neutral-700">ICD provides three core pillars that work together:</p>
 
               <article className="space-y-3">
-                <h3 className="text-xl font-semibold">1. An Overlay License (Dual-License Model)</h3>
-                <p className="text-neutral-700">
-                  A tiered IP model that balances openness with protected innovation.
-                </p>
+                <h3 className="text-xl font-semibold">1. Overlay Licensing</h3>
+                <p className="text-neutral-700">ICD uses a dual-license model designed for defense:</p>
                 <ul className="list-disc pl-6 text-neutral-700 space-y-1">
-                  <li>Open Commons License for reusable, unclassified work</li>
-                  <li>Secure Commons License for sensitive or commercially protected work</li>
+                  <li>Open Commons License &mdash; for reusable, unclassified components.</li>
+                  <li>Secure Commons License &mdash; for sensitive or commercially valuable work.</li>
                   <li>Both include attribution, provenance, and clear IP boundaries.</li>
                 </ul>
                 <p className="text-neutral-700">
-                  Enable reuse without losing ownership. Obtain clear rights, expectations, and unlocked organizational growth.
+                  What this enables: reuse without losing ownership, clear rights for government, secure collaboration between organizations.
                 </p>
                 <Link href="https://github.com/industry-commons-for-defense/icd-licenses" className="text-primary-900 font-semibold underline">
                   → Read the License Set
@@ -70,101 +100,49 @@ export default function FrameworkPage() {
               </article>
 
               <article className="space-y-3">
-                <h3 className="text-xl font-semibold">2. Access</h3>
-                  <p className="text-neutral-700">
-                    Stop waiting on signatures and start building.
-                    The Open Commons License makes reusable, unclassified components available to anyone who passes the trusted background-screening process at SAM.gov. You get back to building with instant access to publicly funded code, data, and tools.
-                  </p>
-
-                  <p className="text-neutral-700 mt-2">
-                    Save time and get started building with end-users from day one. Reuse what's already built, share modules, and accelerate delivery without being blocked by bespoke negotiations or deferred complicated approvals.
-                  </p>
-
-                  <p className="text-neutral-700 font-semibold mt-3">
-                    This enables:
-                  </p>
-
-                  <ul className="list-disc pl-6 text-neutral-700 space-y-1">
-                    <li>shared building blocks</li>
-                    <li>transparent lineage</li>
-                    <li>secure, sovereign development</li>
-                  </ul>
+                <h3 className="text-xl font-semibold">2. The Commons Repo</h3>
+                <p className="text-neutral-700">
+                  A reference organization containing canonical components, schemas, APIs, starter templates, and metadata standards. Organizations can mirror the repo into their own environments (air-gapped or classified) in minutes.
+                </p>
+                <p className="text-neutral-700">What this enables: shared building blocks, transparent lineage, secure, sovereign development.</p>
                 <Link href="/commons" className="text-primary-900 font-semibold underline">
                   → View Repo Structure
                 </Link>
               </article>
 
               <article className="space-y-3">
-                <h3 className="text-xl font-semibold">3. Technical Guidance</h3>
+                <h3 className="text-xl font-semibold">3. The ICD Technical Specification</h3>
                 <p className="text-neutral-700">
-                  The playbook for securing and growing the defense industrial base.
-                  This community-maintained guidance defines how contributors build, validate, and release components inside the Commons.
-                  {/* <br />
-                  <strong>It includes:</strong> */}
+                  Defines how components, metadata, and collaboration work inside the commons. Includes file-level metadata, contribution rules, repository structure, SBOM/HBOM requirements, versioning conventions, and a compliance checklist.
                 </p>
-                <p className="text-neutral-700 font-semibold mt-2">It includes:</p>
-                <ul className="list-disc pl-6 text-neutral-700 space-y-1">
-                  <li>contribution rules and provenance and authorship requirements</li>
-                  <li>SBOM/HBOM requirements</li>
-                  <li>versioning and release conventions</li>
-                  <li>interoperability and compliance expectations</li>
-                </ul>
-
-                <p className="text-neutral-700">
-                  What this enables: predictable integration, consistent audits, module-level interoperability.
-                </p>
+                <p className="text-neutral-700">What this enables: predictable integration, consistent audits, module-level interoperability.</p>
                 <Link href="/documents" className="text-primary-900 font-semibold underline">
                   → Read the Specification
                 </Link>
               </article>
             </section>
 
-            <section id="principles" className="space-y-3 mb-12">
-              <h2 className="text-2xl font-bold">Core Principles</h2>
-              <ul className="space-y-2 text-neutral-700">
-                <li><strong>Build Together.</strong> Common, open standards encourage speed, reuse and efficiency.</li>
-                <li><strong>Share Access.</strong> Streamlined identity and federated repositories enable reuse across programs and vendors.</li>
-                <li><strong>Protect Critical Assets.</strong> Dual licensing preserves commercial advantage while meeting government transparency needs.</li>
-              </ul>
-            </section>
-
             <section id="why" className="space-y-3 mb-12">
               <h2 className="text-2xl font-bold">Why ICD Works</h2>
               <ol className="list-decimal pl-6 text-neutral-700 space-y-2">
-                <li><strong>Stop Negotiating IP from Scratch.</strong> Clear rights up front, before contract award.</li>
-                <li><strong>Stop Reinventing Components.</strong> Reusable modules replace bespoke one-offs.</li>
-                <li><strong>Stop "black box" technology.</strong> SBOM, HBOM, authorship, and version lineage attached to every component.</li>
+                <li><strong>No More Negotiating IP from Scratch:</strong> the license tells everyone what they can do before the contract starts.</li>
+                <li><strong>No More Reinventing the Wheel:</strong> shared modules reduce parallel builds and duplicative spending.</li>
+                <li><strong>No More &quot;Mystery Software&quot;:</strong> every component has SBOM, HBOM, authorship, provenance, and version lineage attached.</li>
               </ol>
             </section>
 
             <section id="procurement" className="space-y-3 mb-12">
               <h2 className="text-2xl font-bold">ICD in Procurement</h2>
-                <p className="text-neutral-700">
-                  A simple clause:
-                </p>    
+              <p className="text-neutral-700">A simple clause:</p>
               <blockquote className="border-l-4 border-primary-900 pl-4 text-neutral-800">
-                “Use, reuse, or development of software components shall comply with the ICD Framework and applicable ICD licenses. All components shall include SBOM/HBOM and provenance metadata as defined in the ICD Specification.”
+                Use, reuse, or development of software components shall comply with the ICD Framework and applicable ICD licenses. Components shall include SBOM/HBOM and provenance metadata as defined in the ICD Specification.
               </blockquote>
-              <p className="text-neutral-700">
-                Aligns naturally with 
-              </p>
-              SHARE-IT Act
-
-MOSA
-
-DevSecOps / Platform One
-
-Software Acquisition Pathway
-
-OTA, rapid prototyping, and MTA pathways
-
-              <ol className="list-decimal pl-6 text-neutral-700 space-y-2">
-                <li>SHARE-IT Act</li>
-                <li>MOSA</li>
-                <li>DevSecOps / Platform One</li>
-                <li>Software Acquisition Pathway</li>
-                <li>OTA, rapid prototyping, and MTA pathways</li>
-              </ol>
+              <p className="text-neutral-700">Aligns naturally with:</p>
+              <ul className="list-disc pl-6 text-neutral-700 space-y-1">
+                {procurementList.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
               <Link href="/documents#templates" className="text-primary-900 font-semibold underline">
                 → Download contract language
               </Link>
@@ -172,50 +150,41 @@ OTA, rapid prototyping, and MTA pathways
 
             <section id="adoption" className="space-y-3 mb-12">
               <h2 className="text-2xl font-bold">How Organizations Use ICD</h2>
-
               <ol className="list-decimal pl-6 text-neutral-700 space-y-4">
-                <li>
-                  <p className="font-semibold">Request the Starter Kit.</p>
-                  <p>Includes licenses, templates, repo instructions, and the full compliance packet.</p>
-                </li>
-
-                <li>
-                  <p className="font-semibold">Access the Commons Repo.</p>
-                  <p>Start building with Defense Commons in your own environment in minutes.</p>
-                </li>
-
-                <li>
-                  <p className="font-semibold">Simplify your next contract.</p>
-                  <p>Apply ICD templates, license, and metadata standards to start building faster.</p>
-                </li>
+                {adoptionSteps.map((step) => (
+                  <li key={step.title}>
+                    <p className="font-semibold">{step.title}</p>
+                    <p className="text-neutral-700">{step.detail}</p>
+                  </li>
+                ))}
               </ol>
+              <p className="text-neutral-700">That&apos;s it. No onboarding. No approval process.</p>
             </section>
 
-            <section id="governance" className="space-y-3 mb-12">
+            <section id="governance" className="space-y-4 mb-12">
               <h2 className="text-2xl font-bold">Governance</h2>
               <p className="text-neutral-700">
-                ICD is maintained by a rotating Steering Body of 15 organizations spanning industry, government, and research.
-                Transparent, RFC-style process built to keep pace with modern technical development.
+                ICD is maintained by a rotating Steering Body of 15 organizations spanning industry, government, and research. Transparent, RFC-style process with an annual publication of updated specifications.
               </p>
               <Link href="/community#governance" className="text-primary-900 font-semibold underline">
                 → View Governance Model
               </Link>
             </section>
 
-            <section id="faq" className="space-y-3 mb-12">
+            <section id="faq" className="space-y-2 mb-12">
               <h2 className="text-2xl font-bold">FAQ</h2>
               <Link href="/faq" className="text-primary-900 font-semibold underline">
                 → Jump to FAQ section
               </Link>
-              <p className="text-sm text-neutral-600">In work, contribute today.</p>
+              <p className="text-sm text-neutral-600">We&apos;ll rewrite this next.</p>
             </section>
 
             <section id="downloads" className="space-y-4">
               <h2 className="text-2xl font-bold">Download the Framework</h2>
               <ul className="space-y-2 text-neutral-700">
-                <li><strong>Starter Kit</strong> — licenses, templates, repo structure.</li>
-                <li><strong>Specifications</strong> — technical definition.</li>
-                <li><strong>Compliance Kit</strong> — SBOM/HBOM templates, metadata schema.</li>
+                <li><strong>Starter Kit:</strong> licenses, templates, repo structure.</li>
+                <li><strong>Specifications:</strong> technical definition.</li>
+                <li><strong>Compliance Kit:</strong> SBOM/HBOM templates, metadata schema.</li>
               </ul>
               <div className="flex flex-wrap gap-3 mt-4">
                 <Link href="/documents" className="px-6 py-3 rounded-xl bg-primary-900 text-white hover:bg-primary-800 shadow-lg">

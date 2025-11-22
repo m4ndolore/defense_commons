@@ -22,6 +22,33 @@ interface FormData {
   interestAreas: string[];
 }
 
+const heroPoints = [
+  "Receive the same starter kit we give to new members.",
+  "Mirror the commons repo and metadata schema into your environment.",
+  "Get compliance-ready templates and scripts before everyone else.",
+];
+
+const benefitCards = [
+  {
+    id: "access",
+    icon: "🚀",
+    title: "Early Access",
+    detail: "Priority slots for pilots, reference repo updates, and new releases.",
+  },
+  {
+    id: "docs",
+    icon: "📦",
+    title: "Documentation Pack",
+    detail: "Licenses, templates, SBOM/HBOM guidance, plus mirroring scripts.",
+  },
+  {
+    id: "signals",
+    icon: "🤝",
+    title: "Community Signals",
+    detail: "Briefings with the Steering Body and program partners.",
+  },
+];
+
 const interestOptions = [
   { value: 'collaboration', label: 'Collaborative Development' },
   { value: 'ipProtection', label: 'IP Protection' },
@@ -110,52 +137,49 @@ export default function WaitlistPage() {
   };
 
   return (
-    <>
-      {/* Header Section */}
-      <Section variant="spacious" background="gradient">
-        <Container size="md">
-          <div className="text-center">
-            <Heading level="h1" className="mb-8 text-white">
-              Join the ICD Waitlist
-            </Heading>
-            <Text variant="large" className="text-white/95 mb-12 max-w-2xl mx-auto">
-              Be among the first to access the collaborative framework that&apos;s transforming defense technology development.
-            </Text>
-          </div>
-        </Container>
-      </Section>
+    <div className="bg-white min-h-screen">
+      <div className="bg-[#f3edff] border-b border-neutral-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <p className="text-xs uppercase tracking-[0.4em] text-primary-800 mb-4">
+            Waitlist
+          </p>
+          <h1 className="text-4xl sm:text-6xl font-display font-bold text-primary-950 mb-6">
+            Join the ICD Waitlist
+          </h1>
+          <p className="text-lg text-primary-900 max-w-3xl mb-8">
+            Access the same starter kit, repo instructions, and compliance templates that we use to onboard members. We&rsquo;ll contact you with next steps.
+          </p>
+          <ul className="space-y-3 text-primary-900 text-lg">
+            {heroPoints.map((point) => (
+              <li key={point} className="flex gap-3">
+                <span className="text-icd-green font-bold">•</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
 
       {/* Benefits Section */}
-      <Section variant="default" background="white">
-        <Container size="md">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚀</span>
+      <Section background="gray">
+        <Container>
+          <div className="text-left mb-10">
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-gray-900">
+              What you get
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {benefitCards.map((benefit) => (
+              <div key={benefit.id} className="text-center group hover:scale-105 transition-all duration-200">
+                <div className="inline-flex items-center justify-center w-20 h-20 mb-6 rounded-full bg-white group-hover:bg-primary-100 transition-colors">
+                  <span className="text-3xl">{benefit.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">
+                  {benefit.detail}
+                </p>
               </div>
-              <Heading level="h4" className="mb-2">Early Access</Heading>
-              <Text variant="small" className="text-neutral-600">
-                Get priority access to ICD platform features and pilot programs
-              </Text>
-            </div>
-            <div className="text-center">
-              <div className="bg-accent-gold/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔔</span>
-              </div>
-              <Heading level="h4" className="mb-2">Updates & Insights</Heading>
-              <Text variant="small" className="text-neutral-600">
-                Receive exclusive updates on framework development and opportunities
-              </Text>
-            </div>
-            <div className="text-center">
-              <div className="bg-accent-green/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🤝</span>
-              </div>
-              <Heading level="h4" className="mb-2">Community Access</Heading>
-              <Text variant="small" className="text-neutral-600">
-                Connect with other defense technology innovators and partners
-              </Text>
-            </div>
+            ))}
           </div>
         </Container>
       </Section>
@@ -356,6 +380,6 @@ export default function WaitlistPage() {
           </div>
         </Container>
       </Section>
-    </>
+    </div>
   );
 }

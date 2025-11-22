@@ -48,36 +48,33 @@ const mirroringSteps = [
 export default function CommonsPage() {
   return (
     <>
-      <Section background="gray">
-        <Container size="lg">
-          <div className="max-w-3xl">
-            <p className="text-primary-700 uppercase tracking-wide text-sm font-semibold mb-2">
-              Commons
-            </p>
-            <h1 className="text-4xl font-display font-bold text-gray-900 mb-4">
-              The reusable code, data, and standards you can deploy today
-            </h1>
-            <p className="text-lg text-gray-600 mb-6">
-              ICD operates a neutral GitHub organization plus curated components so every
-              member starts from the same trusted baseline.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button
-                href="https://github.com/industry-commons-for-defense"
-                variant="primary"
-                size="lg"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit the repo
-              </Button>
-              <Button href="/waitlist" variant="secondary" size="lg">
-                Request mirroring access
-              </Button>
-            </div>
+      <div className="bg-gray-50 border-b border-neutral-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <p className="text-primary-700 uppercase tracking-[0.4em] text-xs font-semibold mb-4">
+            Commons
+          </p>
+          <h1 className="text-4xl font-display font-bold text-gray-900 mb-4">
+            The reusable code, data, and standards you can deploy today
+          </h1>
+          <p className="text-lg text-gray-600 mb-6 max-w-3xl">
+            ICD operates a neutral GitHub organization plus curated components so every member starts from the same trusted baseline.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button
+              href="https://github.com/industry-commons-for-defense"
+              variant="primary"
+              size="lg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit the repo
+            </Button>
+            <Button href="/waitlist" variant="secondary" size="lg">
+              Request mirroring access
+            </Button>
           </div>
-        </Container>
-      </Section>
+        </div>
+      </div>
 
       <Section>
         <Container>

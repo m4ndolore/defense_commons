@@ -51,21 +51,19 @@ const communitySegments = [
 export default function CommunityPage() {
   return (
     <>
-      <Section background="gray">
-        <Container size="md">
-          <div className="text-center mb-10">
-            <p className="text-primary-700 uppercase tracking-wide text-sm font-semibold mb-2">
-              Community
-            </p>
-            <h1 className="text-4xl font-display font-bold text-gray-900 mb-4">
-              One framework, shared across industry and government
-            </h1>
-            <p className="text-lg text-gray-600">
-              ICD works because every participant uses the same agreements, repo, and starter kit. Pick your role and plug in.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      <div className="bg-gray-50 border-b border-neutral-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <p className="text-primary-700 uppercase tracking-[0.4em] text-xs font-semibold mb-4">
+            Defense Commons Community
+          </p>
+          <h1 className="text-4xl font-display font-bold text-gray-900 mb-4">
+            One framework, shared across industry and government
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl">
+            ICD works because every participant uses the same agreements, repo, and starter kit. Pick your role and plug in.
+          </p>
+        </div>
+      </div>
 
       <Section>
         <Container>

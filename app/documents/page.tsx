@@ -10,22 +10,24 @@ const baseGitHubUrl = "https://github.com/industry-commons-for-defense/icd-artif
 export default function DocumentsPage() {
   return (
     <div className="bg-white min-h-screen">
+      <div className="bg-[#f3edff] border-b border-neutral-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <p className="text-xs uppercase tracking-[0.4em] text-primary-800 mb-4">
+            Documents
+          </p>
+          <h1 className="text-4xl font-bold text-black mb-2">
+            Defense Commons License
+          </h1>
+          <p className="text-lg text-neutral-700 max-w-3xl">
+            Download the licenses, templates, and specs that power ICD.
+          </p>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col lg:flex-row gap-12">
 
           {/* Main Content - Left Side */}
           <main className="flex-1 max-w-3xl">
-            {/* Title and Attribution */}
-            <p className="text-xs uppercase tracking-[0.4em] text-primary-800 mb-6">
-              Industry Commons for Defense
-            </p>
-            <h1 className="text-4xl font-bold text-black mb-2">
-              Defense Commons License
-            </h1>
-            <p className="text-lg text-neutral-600 mb-12">
-              By Paul Garcia
-            </p>
-
             {/* Download the License */}
             <section id="download-license" className="mb-12">
               <h2 className="text-2xl font-bold text-black mb-6">
