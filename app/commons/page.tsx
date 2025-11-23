@@ -70,7 +70,7 @@ export default function CommonsPage() {
               Visit the repo
             </Button>
             <Button href="/waitlist" variant="secondary" size="lg">
-              Request mirroring access
+              Join the waitlist.
             </Button>
           </div>
         </div>
