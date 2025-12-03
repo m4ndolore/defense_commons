@@ -53,8 +53,8 @@ const config: any = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        'display': ['var(--font-source-sans)', 'system-ui', 'sans-serif'],
-        'sans': ['var(--font-source-sans)', 'system-ui', 'sans-serif'],
+        'display': ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+        'sans': ['"Source Sans 3"', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

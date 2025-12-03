@@ -26,28 +26,28 @@ const elsewhere = [
   { label: "Community", href: "/community" },
 ];
 
-const procurementList = [
-  "SHARE-IT Act",
-  "MOSA",
-  "DevSecOps / Platform One",
-  "Software Acquisition Pathway",
-  "OTA, rapid prototyping, and MTA pathways",
-];
+// const procurementList = [
+//   "SHARE-IT Act",
+//   "MOSA",
+//   "DevSecOps / Platform One",
+//   "Software Acquisition Pathway",
+//   "OTA, rapid prototyping, and MTA pathways",
+// ];
 
-const adoptionSteps = [
-  {
-    title: "Request the Starter Kit",
-    detail: "All documents, licenses, templates, and repo instructions.",
-  },
-  {
-    title: "Mirror the Commons Repo",
-    detail: "Bring ICD into your own environment, classified or unclassified.",
-  },
-  {
-    title: "Cite ICD in Your Next Contract",
-    detail: "Use the license, include the compliance packet, adopt the repo structure.",
-  },
-];
+// const adoptionSteps = [
+//   {
+//     title: "Request the Starter Kit",
+//     detail: "All documents, licenses, templates, and repo instructions.",
+//   },
+//   {
+//     title: "Mirror the Commons Repo",
+//     detail: "Bring ICD into your own environment, classified or unclassified.",
+//   },
+//   {
+//     title: "Cite ICD in Your Next Contract",
+//     detail: "Use the license, include the compliance packet, adopt the repo structure.",
+//   },
+// ];
 
 export default function FrameworkPage() {
   return (
@@ -116,7 +116,7 @@ export default function FrameworkPage() {
                   </p>
 
                   <p className="text-neutral-700 mt-2">
-                    Save time and get started building with end-users from day one. Reuse what's already built, share modules, and accelerate delivery without being blocked by bespoke negotiations or deferred complicated approvals.
+                    Save time and get started building with end-users from day one. Reuse what&apos;s already built, share modules, and accelerate delivery without being blocked by bespoke negotiations or deferred complicated approvals.
                   </p>
 
                   <p className="text-neutral-700 font-semibold mt-3">
@@ -172,7 +172,7 @@ export default function FrameworkPage() {
                 <ol className="list-decimal pl-6 text-neutral-700 space-y-2">
                   <li><strong>Stop Negotiating IP from Scratch.</strong> Clear rights up front, before contract award.</li>
                   <li><strong>Stop Reinventing Components.</strong> Reusable modules replace bespoke one-offs.</li>
-                  <li><strong>Stop "black box" technology.</strong> SBOM, HBOM, authorship, and version lineage attached to every component.</li>
+                  <li><strong>Stop &ldquo;black box&rdquo; technology.</strong> SBOM, HBOM, authorship, and version lineage attached to every component.</li>
                 </ol>
               </section>
 
