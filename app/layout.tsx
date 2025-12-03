@@ -1,15 +1,7 @@
 import type { Metadata } from "next";
-import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "900"],
-  variable: "--font-source-sans",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://icd-defense.org'),
@@ -58,7 +50,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={sourceSans.variable}>
+    <html lang="en">
+      <head>
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="font-sans antialiased bg-gray-50">
         <Header />
         <main className="min-h-screen">{children}</main>
